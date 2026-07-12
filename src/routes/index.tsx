@@ -626,6 +626,82 @@ function EvidenceGallery({
   );
 }
 
+/**
+ * EvalAndIntegrity — khối "Phân tích - Đánh giá" + "Liêm chính học thuật & Sử dụng AI"
+ * dùng chung cho cuối mỗi bài tập. Nội dung khác nhau ở từng bài.
+ */
+function EvalAndIntegrity({
+  good,
+  improve,
+  lesson,
+  aiUsage,
+  commitments,
+}: {
+  good: string[];
+  improve: string[];
+  lesson: string[];
+  aiUsage: string[];
+  commitments: string[];
+}) {
+  return (
+    <div className="mt-8 space-y-6">
+      <div>
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>📊</span><span>Phân tích – Đánh giá</span>
+        </h4>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-emerald-700 dark:text-emerald-400">
+              <span>✅</span><span>Điểm tốt</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {good.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-amber-700 dark:text-amber-400">
+              <span>🛠️</span><span>Cần cải thiện</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {improve.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-sky-500/30 bg-sky-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-sky-700 dark:text-sky-400">
+              <span>💡</span><span>Bài học rút ra</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {lesson.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-border bg-muted/30 p-5">
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>🎓</span><span>Liêm chính học thuật & Sử dụng AI</span>
+        </h4>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div>
+            <h5 className="mb-2 text-sm font-bold text-foreground">Cách tôi sử dụng AI:</h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {aiUsage.map((x, i) => <li key={i}>→ {x}</li>)}
+            </ul>
+          </div>
+          <div>
+            <h5 className="mb-2 text-sm font-bold text-foreground">Cam kết liêm chính:</h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {commitments.map((x, i) => <li key={i}>☑ {x}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
@@ -680,6 +756,31 @@ function Project1() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Thực hiện đầy đủ các thao tác cơ bản với tệp và thư mục.",
+          "Chụp màn hình chi tiết từng bước làm minh chứng.",
+          "Tổ chức cấu trúc thư mục khoa học, dễ quản lý.",
+        ]}
+        improve={[
+          "Cần tìm hiểu thêm phím tắt File Explorer để thao tác nhanh.",
+          "Học cách dùng tính năng tìm kiếm nâng cao trong Explorer.",
+        ]}
+        lesson={[
+          "Quản lý tệp có tổ chức giúp tiết kiệm thời gian tìm kiếm.",
+          "Biết dùng Recycle Bin để khôi phục tệp đã xoá nhầm.",
+          "Shortcut giúp truy cập nhanh các thư mục thường dùng.",
+        ]}
+        aiUsage={[
+          "Không sử dụng AI trong bài tập này.",
+          "Tự thực hành trực tiếp trên máy theo hướng dẫn giảng viên.",
+        ]}
+        commitments={[
+          "Tự thực hiện tất cả thao tác trên máy tính cá nhân.",
+          "Ảnh chụp màn hình là minh chứng thực tế từ quá trình làm.",
+          "Toàn bộ báo cáo được viết dựa trên trải nghiệm thực tế.",
+        ]}
+      />
     </ProjectShell>
   );
 }
@@ -787,6 +888,32 @@ function Project2() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Áp dụng thành thạo toán tử site:, filetype:, \"...\", AND/OR.",
+          "Đánh giá độ tin cậy nguồn theo 4 tiêu chí rõ ràng.",
+          "Ưu tiên nguồn học thuật bình duyệt và tổ chức quốc tế.",
+        ]}
+        improve={[
+          "Cần tìm hiểu thêm database chuyên ngành (Scopus, WoS).",
+          "Bổ sung kỹ thuật trích dẫn APA/IEEE bằng Zotero.",
+        ]}
+        lesson={[
+          "Từ khoá tốt tiết kiệm 80% thời gian tìm tài liệu.",
+          "Không nguồn nào tuyệt đối đúng — cần đối chiếu chéo.",
+          "Blog cá nhân chỉ nên dùng làm gợi ý, không làm dẫn chứng.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT gợi ý từ khoá tiếng Anh chuyên ngành.",
+          "Dùng AI tóm tắt nhanh bài báo dài để sàng lọc trước khi đọc.",
+          "Không dùng AI thay thế cho việc đọc và trích dẫn gốc.",
+        ]}
+        commitments={[
+          "Luôn kiểm tra bản gốc trước khi trích dẫn tài liệu.",
+          "Không bịa nguồn hoặc trích dẫn nguồn chưa đọc.",
+          "Ghi rõ khi AI được dùng để hỗ trợ tìm kiếm.",
+        ]}
+      />
     </ProjectShell>
   );
 }
@@ -886,6 +1013,32 @@ function Project3() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "So sánh có hệ thống 2 phiên bản prompt trên cùng chủ đề.",
+          "Áp dụng công thức Vai trò – Ngữ cảnh – Yêu cầu – Định dạng.",
+          "Đầu ra V2 rõ ràng, đúng ý và dễ tái sử dụng hơn V1.",
+        ]}
+        improve={[
+          "Cần thử thêm mô hình khác (Claude) để đối chiếu kết quả.",
+          "Bổ sung ví dụ prompt phản mẫu (anti-pattern) để tránh.",
+        ]}
+        lesson={[
+          "Prompt càng cụ thể, đầu ra càng chất lượng.",
+          "Đặt vai trò cho AI giúp tăng độ chuyên môn hoá.",
+          "Luôn kiểm chứng thông tin AI bằng nguồn thứ hai.",
+        ]}
+        aiUsage={[
+          "ChatGPT và Gemini là đối tượng thử nghiệm chính.",
+          "Prompt do cá nhân thiết kế, chỉnh sửa qua nhiều vòng.",
+          "Kết luận và đánh giá đầu ra hoàn toàn do cá nhân viết.",
+        ]}
+        commitments={[
+          "Không dùng đầu ra AI làm bài mẫu để nộp trực tiếp.",
+          "Ghi lại prompt gốc để có thể tái hiện kết quả.",
+          "Trích dẫn nguồn khi trích lại thông tin AI cung cấp.",
+        ]}
+      />
     </ProjectShell>
   );
 }
@@ -968,6 +1121,32 @@ function Project4() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Phân công công việc rõ ràng theo năng lực từng thành viên.",
+          "Sử dụng Trello/Notion giúp tiến độ minh bạch, dễ theo dõi.",
+          "Họp nhóm định kỳ có biên bản, tránh trùng lặp công việc.",
+        ]}
+        improve={[
+          "Một số buổi họp còn kéo dài do chưa có agenda cụ thể.",
+          "Cần thống nhất quy ước đặt tên file khi cộng tác.",
+        ]}
+        lesson={[
+          "Giao tiếp chủ động quan trọng hơn công cụ đang dùng.",
+          "Deadline nội bộ nên đặt sớm hơn deadline chính thức.",
+          "Ghi nhận đóng góp cá nhân giúp nhóm gắn kết hơn.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT để gợi ý mẫu biên bản họp nhóm.",
+          "Dùng AI dịch nhanh tài liệu tham khảo tiếng Anh.",
+          "Không dùng AI để thay thế trao đổi giữa các thành viên.",
+        ]}
+        commitments={[
+          "Đóng góp trung thực, không nhận công của thành viên khác.",
+          "Ghi nhận rõ phần việc AI hỗ trợ trong tài liệu nhóm.",
+          "Bảo mật thông tin nội bộ của nhóm khi trao đổi.",
+        ]}
+      />
     </ProjectShell>
   );
 }
@@ -1034,6 +1213,32 @@ function Project5() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Sản phẩm AI được cá nhân hoá, không giữ nguyên bản gốc.",
+          "Kết hợp nhiều công cụ (Canva, CapCut, Midjourney) hợp lý.",
+          "Ý tưởng bám sát chủ đề học tập, dễ hiểu với người xem.",
+        ]}
+        improve={[
+          "Chất lượng ảnh AI đôi lúc chưa đồng đều về phong cách.",
+          "Cần rút ngắn video để giữ sự chú ý ở mạng xã hội.",
+        ]}
+        lesson={[
+          "Prompt tốt quyết định 70% chất lượng sản phẩm AI.",
+          "Bước hiệu chỉnh thủ công là bắt buộc để tạo dấu ấn cá nhân.",
+          "Tôn trọng bản quyền hình ảnh và nhạc nền khi dùng AI.",
+        ]}
+        aiUsage={[
+          "Midjourney/DALL·E tạo ảnh minh hoạ theo storyboard tự viết.",
+          "ChatGPT hỗ trợ viết kịch bản, cá nhân điều chỉnh giọng văn.",
+          "CapCut + Runway hỗ trợ dựng, tôi cắt ghép và lồng tiếng cuối.",
+        ]}
+        commitments={[
+          "Khai báo rõ công cụ AI trong phần mô tả sản phẩm.",
+          "Không dùng ảnh/nhạc vi phạm bản quyền trong sản phẩm.",
+          "Ghi credit cho các tài nguyên mở đã sử dụng.",
+        ]}
+      />
     </ProjectShell>
   );
 }
@@ -1121,6 +1326,32 @@ function Project6() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Xác định rõ 7 nguyên tắc dùng AI cá nhân, dễ áp dụng.",
+          "Phân biệt được phần tự làm và phần AI hỗ trợ trong bài.",
+          "Luôn kiểm chứng thông tin AI trả về trước khi trích dẫn.",
+        ]}
+        improve={[
+          "Cần khai báo chi tiết hơn về prompt và mô hình đã dùng.",
+          "Bổ sung ví dụ tình huống vi phạm để tự cảnh báo.",
+        ]}
+        lesson={[
+          "AI là công cụ hỗ trợ, không thay thế tư duy cá nhân.",
+          "Trung thực học thuật quan trọng hơn kết quả nhanh.",
+          "Ghi rõ nguồn AI giúp bài viết đáng tin cậy hơn.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT để gợi ý cấu trúc bộ nguyên tắc.",
+          "Dùng Gemini để đối chiếu ví dụ đạo đức AI.",
+          "Toàn bộ nội dung cuối cùng do cá nhân biên tập lại.",
+        ]}
+        commitments={[
+          "Không sao chép nguyên văn đầu ra AI vào bài nộp.",
+          "Ghi chú rõ đoạn nào có AI hỗ trợ, đoạn nào tự viết.",
+          "Sẵn sàng chịu trách nhiệm với mọi nội dung đã công bố.",
+        ]}
+      />
     </ProjectShell>
   );
 }
