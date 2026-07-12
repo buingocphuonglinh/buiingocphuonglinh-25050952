@@ -246,8 +246,13 @@ function PortfolioPage() {
       <Section id="gioi-thieu" eyebrow="About Me" title="Giới thiệu bản thân" subtitle="Một sinh viên đang từng bước làm chủ công nghệ số và AI trong học tập.">
         <div className="grid gap-8 md:grid-cols-[1fr_1.4fr]">
           <div className="reveal rounded-3xl border border-border bg-card p-6 shadow-card card-hover">
-            <div className="mx-auto grid h-32 w-32 place-items-center rounded-full gradient-primary text-5xl text-white shadow-soft">
-              👩‍🎓
+            <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full ring-4 ring-primary/30 shadow-soft">
+              <img
+                src={studentAvatar.url}
+                alt="Ảnh sinh viên"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
             </div>
             <h3 className="mt-4 text-center text-xl font-bold">[Điền tên của bạn]</h3>
             <p className="text-center text-sm text-muted-foreground">Sinh viên năm nhất</p>
