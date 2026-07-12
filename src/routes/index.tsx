@@ -1094,7 +1094,16 @@ function Project6() {
         </div>
       </div>
 
-      <EvidenceBox label="Infographic bộ nguyên tắc sử dụng AI cá nhân" />
+      <EvidenceGallery
+        items={[
+          { title: "Infographic 7 nguyên tắc dùng AI có trách nhiệm" },
+          { title: "Ví dụ prompt vi phạm & prompt cải thiện" },
+          { title: "Ảnh chụp phần khai báo dùng AI trong bài" },
+          { title: "Bảng phân biệt phần tự làm và phần AI hỗ trợ" },
+          { title: "Cam kết trung thực học thuật cá nhân" },
+          { title: "Ghi chú kiểm chứng thông tin AI trả về" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích – Tư duy phản biện">
