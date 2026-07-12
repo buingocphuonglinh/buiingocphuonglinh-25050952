@@ -439,10 +439,13 @@ function PortfolioPage() {
             <div className="text-sm">
               <h4 className="font-bold">Thông tin sinh viên</h4>
               <ul className="mt-3 space-y-1 text-muted-foreground">
-                <li>Họ tên: <b className="text-foreground">[Điền tên của bạn]</b></li>
+                <li>Họ tên: <b className="text-foreground">Bùi Ngọc Phương Linh</b></li>
+                <li>MSV: <b className="text-foreground">25050952</b></li>
+                <li>Lớp: <b className="text-foreground">QH-2025-E KTQT 2</b></li>
+                <li>Khoa: <b className="text-foreground">Kinh tế Quốc tế – ĐH Kinh tế, ĐHQGHN</b></li>
                 <li>Môn học: <b className="text-foreground">Nhập môn CNS & AI</b></li>
                 <li>Năm học: <b className="text-foreground">2025 – 2026</b></li>
-                <li>Email: <b className="text-foreground">[email@example.com]</b></li>
+                <li>Email: <b className="text-foreground">25050952@vnu.edu.vn</b></li>
               </ul>
             </div>
             <div className="text-sm">
