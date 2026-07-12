@@ -320,8 +320,8 @@ function PortfolioPage() {
                 </div>
 
                 <div className="mt-5 flex items-center gap-4">
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-primary/40">
-                    <img src={studentAvatar.url} alt="Ảnh đại diện" className="h-full w-full object-cover" loading="lazy" />
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-primary/40 bg-[#3d4a2a]">
+                    <img src={studentAvatar.url} alt="Ảnh đại diện" className="h-full w-full object-cover scale-125" loading="lazy" />
                   </div>
                   <div className="min-w-0">
                     <h3 className="truncate text-lg font-bold">Bùi Ngọc Phương Linh</h3>
@@ -375,11 +375,11 @@ function PortfolioPage() {
       <Section id="gioi-thieu" eyebrow="About Me" title="Giới thiệu bản thân" subtitle="Một sinh viên đang từng bước làm chủ công nghệ số và AI trong học tập.">
         <div className="grid gap-8 md:grid-cols-[1fr_1.4fr]">
           <div className="reveal rounded-3xl border border-border bg-card p-6 shadow-card card-hover">
-            <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full ring-4 ring-primary/30 shadow-soft">
+            <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full ring-4 ring-primary/30 shadow-soft bg-[#3d4a2a]">
               <img
                 src={studentAvatar.url}
                 alt="Ảnh sinh viên"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover scale-125"
                 loading="lazy"
               />
             </div>
