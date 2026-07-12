@@ -184,7 +184,7 @@ function PortfolioPage() {
       </header>
 
       {/* ================= HERO ================= */}
-      <section id="home" className="relative overflow-hidden pt-28 pb-20 sm:pt-32">
+      <section id="home" className="relative overflow-hidden pt-28 pb-24 sm:pt-32">
         <div className="absolute inset-0 gradient-hero opacity-70" />
         <div
           className="absolute -top-24 -right-24 h-96 w-96 animate-blob animate-float opacity-40"
@@ -195,64 +195,122 @@ function PortfolioPage() {
           style={{ background: "radial-gradient(circle, oklch(0.85 0.14 155) 0%, transparent 70%)", animationDelay: "2s" }}
         />
 
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-[1.2fr_1fr] md:items-center">
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 md:grid-cols-[1.15fr_1fr] md:items-center">
+          {/* CỘT TRÁI — Nội dung chính */}
           <div className="reveal">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+              <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
               Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo
             </span>
-            <h1 className="mt-5 text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
-              Portfolio <span className="bg-gradient-to-r from-[oklch(0.7_0.18_10)] to-[oklch(0.65_0.18_155)] bg-clip-text text-transparent">Kỹ thuật số</span> cá nhân
+
+            <h1 className="mt-5 text-4xl font-black leading-[1.05] sm:text-5xl md:text-6xl">
+              Portfolio{" "}
+              <span className="bg-gradient-to-r from-[oklch(0.7_0.18_10)] to-[oklch(0.65_0.18_155)] bg-clip-text text-transparent">
+                Kỹ thuật số
+              </span>
+              <br />
+              cá nhân
             </h1>
-            <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-              Hành trình học tập môn <em>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</em> — nơi lưu trữ, trình bày và tự đánh giá quá trình học tập thông qua các sản phẩm số đã hoàn thành.
+
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Hành trình học tập môn <em>Nhập môn Công nghệ số & AI</em> — nơi lưu trữ,
+              trình bày và tự đánh giá quá trình học tập thông qua các sản phẩm số đã hoàn thành.
             </p>
+
+            {/* CTA chính — chỉ 2 nút để tạo điểm nhấn */}
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#du-an" className="rounded-full gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:scale-105">
-                Khám phá dự án →
+              <a
+                href="#du-an"
+                className="group inline-flex items-center gap-2 rounded-full gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:scale-105"
+              >
+                Khám phá 6 dự án
+                <span className="transition group-hover:translate-x-1">→</span>
               </a>
-              <a href="#gioi-thieu" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition hover:bg-accent">
-                Giới thiệu
-              </a>
-              <a href="#minh-chung" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition hover:bg-accent">
-                Xem minh chứng
-              </a>
-              <a href="#tong-ket" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold transition hover:bg-accent">
-                Tổng kết
+              <a
+                href="#gioi-thieu"
+                className="rounded-full border border-border bg-card/70 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-accent"
+              >
+                Về tôi
               </a>
             </div>
-            <dl className="mt-10 grid grid-cols-3 gap-4 max-w-md">
+
+            {/* Stats */}
+            <dl className="mt-10 grid max-w-md grid-cols-3 gap-4">
               <Stat n="06" label="Bài tập cuối kỳ" />
               <Stat n="08" label="Kỹ năng số" />
               <Stat n="100%" label="Hoàn thành" />
             </dl>
           </div>
 
+          {/* CỘT PHẢI — Card thẻ sinh viên nổi bật */}
           <div className="reveal relative">
-            <div className="relative mx-auto aspect-square max-w-sm">
-              <div className="absolute inset-0 animate-blob gradient-secondary opacity-60" />
-              <div className="absolute inset-4 animate-blob gradient-primary opacity-70" style={{ animationDelay: "3s" }} />
-              <div className="absolute inset-0 grid place-items-center">
-                <div className="rounded-3xl bg-card/90 p-8 shadow-soft backdrop-blur">
-                  <div className="grid grid-cols-3 gap-3 text-center">
-                    {["📁", "🔎", "💬", "🤝", "🎨", "🛡️", "📊", "🤖", "✨"].map((e, i) => (
-                      <div
-                        key={i}
-                        className="grid aspect-square place-items-center rounded-2xl bg-accent text-2xl shadow-card"
-                        style={{ animation: `float 5s ease-in-out ${i * 0.3}s infinite` }}
-                      >
-                        {e}
-                      </div>
-                    ))}
+            <div className="relative mx-auto max-w-sm">
+              {/* Blob nền trang trí */}
+              <div className="absolute -inset-6 animate-blob gradient-secondary opacity-40 blur-2xl" />
+              <div
+                className="absolute -inset-2 animate-blob gradient-primary opacity-30 blur-xl"
+                style={{ animationDelay: "3s" }}
+              />
+
+              {/* Thẻ ID nổi bật */}
+              <div className="relative rounded-3xl border border-border bg-card/95 p-6 shadow-soft backdrop-blur">
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+                    Student ID · 2025
+                  </span>
+                  <span className="text-lg">🎓</span>
+                </div>
+
+                <div className="mt-5 flex items-center gap-4">
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-primary/40">
+                    <img src={studentAvatar.url} alt="Ảnh đại diện" className="h-full w-full object-cover" loading="lazy" />
                   </div>
-                  <p className="mt-4 text-center text-xs font-semibold text-muted-foreground">
-                    Kỹ năng số × Trí tuệ nhân tạo
-                  </p>
+                  <div className="min-w-0">
+                    <h3 className="truncate text-lg font-bold">Bùi Ngọc Phương Linh</h3>
+                    <p className="text-xs text-muted-foreground">MSV 25050952</p>
+                    <p className="text-xs text-muted-foreground">QH-2025-E KTQT 2</p>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid grid-cols-3 gap-2 rounded-2xl bg-accent/50 p-3 text-center">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Khoa</div>
+                    <div className="mt-0.5 text-xs font-bold">KTQT</div>
+                  </div>
+                  <div className="border-x border-border/60">
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Trường</div>
+                    <div className="mt-0.5 text-xs font-bold">UEB · VNU</div>
+                  </div>
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Năm</div>
+                    <div className="mt-0.5 text-xs font-bold">Nhất</div>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {["📁 Dữ liệu", "🔎 Học thuật", "🤖 AI", "🛡️ Đạo đức"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Scroll indicator */}
+        <a
+          href="#gioi-thieu"
+          className="reveal mx-auto mt-16 hidden max-w-6xl items-center justify-center gap-2 text-xs font-medium text-muted-foreground md:flex"
+        >
+          <span className="h-8 w-px bg-border" />
+          Cuộn xuống để khám phá
+          <span className="h-8 w-px bg-border" />
+        </a>
       </section>
 
       {/* ================= ABOUT ================= */}
