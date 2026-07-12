@@ -652,7 +652,16 @@ function Project1() {
         </Block>
       </div>
 
-      <EvidenceBox label="Ảnh chụp cấu trúc thư mục học tập" />
+      <EvidenceGallery
+        items={[
+          { title: "Ảnh chụp cây thư mục gốc NMCNS_AI_2026" },
+          { title: "4 thư mục con: Bài tập / Tài liệu / Hình ảnh / Sản phẩm" },
+          { title: "Ví dụ tệp đặt tên đúng quy ước phiên bản" },
+          { title: "Đồng bộ Google Drive – trạng thái backup" },
+          { title: "Đồng bộ OneDrive trên thiết bị cá nhân" },
+          { title: "So sánh trước – sau khi chuẩn hoá thư mục" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích">
