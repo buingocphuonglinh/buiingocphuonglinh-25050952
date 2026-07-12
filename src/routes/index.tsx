@@ -1515,26 +1515,45 @@ function Project4() {
 // ============================================================
 function Project5() {
   const steps = [
-    { s: "1. Ý tưởng", d: "Chọn khái niệm: “AI tạo sinh là gì và ứng dụng trong học tập”." },
-    { s: "2. Kịch bản", d: "Dùng ChatGPT gợi ý outline 5 phần, tự viết lại lời dẫn." },
-    { s: "3. Tạo nội dung AI", d: "DALL·E tạo hình minh họa, ElevenLabs tạo giọng đọc." },
-    { s: "4. Chỉnh sửa thủ công", d: "Ghép video trên CapCut, sửa phụ đề, chỉnh nhạc nền." },
-    { s: "5. Kiểm tra chất lượng", d: "Rà soát thông tin, đối chiếu với tài liệu môn học." },
-    { s: "6. Hoàn thiện", d: "Xuất video 4 phút, upload YouTube (unlisted), đính link." },
+    { s: "1. Xác định câu hỏi", d: "Nêu rõ điều cần biết và phạm vi kiểm chứng trước khi hỏi AI." },
+    { s: "2. Yêu cầu dữ kiện", d: "Yêu cầu AI tách dữ kiện, giả định và điểm chưa chắc chắn." },
+    { s: "3. Đối chiếu 3 nguồn", d: "Ưu tiên sách, bài báo học thuật hoặc trang chính thức." },
+    { s: "4. Kiểm tra bối cảnh", d: "Rà soát thời gian, đối tượng và ngữ cảnh của thông tin." },
+    { s: "5. Tự viết kết luận", d: "Tổng hợp bằng lời của mình, ghi nguồn khi cần thiết." },
+  ];
+  const tools = [
+    {
+      name: "ChatGPT",
+      role: "Xây dựng nội dung",
+      pros: "Chuyển chủ đề rộng thành các ý ngắn theo trình tự nhanh chóng, hỗ trợ hình thành cấu trúc infographic 5 bước.",
+      cons: "Nội dung ban đầu còn dài, mang tính khái quát — cần chọn lọc, rút gọn và chuyển sang dạng hành động.",
+    },
+    {
+      name: "Microsoft Designer",
+      role: "Tạo hình minh họa",
+      pros: "Sinh nhanh nhiều phương án ảnh giáo dục về AI, tài liệu, đối chiếu nguồn theo chủ đề.",
+      cons: "Phụ thuộc nhiều vào từ khóa; một số hình dư chi tiết, chưa đúng trọng tâm kiểm chứng thông tin.",
+    },
+    {
+      name: "Canva AI",
+      role: "Hoàn thiện bố cục",
+      pros: "Cho phép thử nhiều bố cục, sắp xếp nội dung và hoàn thiện sản phẩm trong cùng một môi trường thiết kế.",
+      cons: "Gợi ý tự động chưa thay được căn chỉnh thủ công về khoảng cách, mật độ chữ và biểu tượng.",
+    },
   ];
   return (
-    <ProjectShell id="task-5" num="05" icon="🎨" title="Bài tập 5 – Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung" tags={["Canva", "CapCut", "DALL·E", "ChatGPT"]}>
+    <ProjectShell id="task-5" num="05" icon="🎨" title="Bài tập 5 – Ứng dụng AI tạo sinh để thiết kế Infographic hướng dẫn kiểm chứng thông tin" tags={["ChatGPT", "Microsoft Designer", "Canva AI", "Infographic"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
-          Biết sử dụng AI để tạo sản phẩm nội dung số phục vụ học tập — video ngắn dưới 5 phút.
+          Kết hợp ba công cụ AI tạo sinh (ChatGPT, Microsoft Designer, Canva AI) để xây dựng infographic hướng dẫn sinh viên <b>kiểm chứng thông tin do AI hỗ trợ</b>, đồng thời đánh giá vai trò của tư duy con người trong sáng tạo nội dung số.
         </Block>
         <Block label="🎁 Sản phẩm">
-          Video giải thích khái niệm <b>“AI tạo sinh”</b> dài ~4 phút, kèm phụ đề và infographic.
+          Infographic <b>“5 bước kiểm chứng thông tin cùng AI”</b> — bố cục 5 khối độc lập, đánh số, dùng biểu tượng và ngôn ngữ hành động, giúp người xem nắm quy trình ngay từ lần quan sát đầu tiên.
         </Block>
       </div>
 
       <div className="mt-6">
-        <h4 className="mb-3 text-sm font-black uppercase tracking-wider text-primary">🎬 Quy trình sản xuất — 6 bước</h4>
+        <h4 className="mb-3 text-sm font-black uppercase tracking-wider text-primary">🧭 5 bước kiểm chứng thông tin cùng AI</h4>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((st) => (
             <div key={st.s} className="rounded-2xl border border-border bg-muted/40 p-4">
@@ -1543,59 +1562,102 @@ function Project5() {
             </div>
           ))}
         </div>
+        <p className="mt-3 text-xs italic text-muted-foreground">
+          Nguyên tắc cốt lõi: <b>AI gợi ý — người học kiểm chứng — người học chịu trách nhiệm.</b>
+        </p>
       </div>
 
-      <EvidenceGallery
-        items={[
-          { title: "Storyboard nội dung do AI phác thảo" },
-          { title: "Infographic tạo bằng Canva + AI" },
-          { title: "Ảnh minh họa AI (Midjourney / DALL·E)" },
-          { title: "Video ngắn dựng bằng CapCut / Runway" },
-          { title: "Bản chỉnh sửa cá nhân sau đầu ra AI" },
-          { title: "Ảnh chụp link sản phẩm đã đăng tải" },
-        ]}
-      />
+      <div className="mt-6">
+        <h4 className="mb-3 text-sm font-black uppercase tracking-wider text-primary">🛠️ Quy trình thiết kế với 3 công cụ AI</h4>
+        <div className="grid gap-4 md:grid-cols-3">
+          {tools.map((t) => (
+            <div key={t.name} className="rounded-2xl border border-border bg-card/60 p-5">
+              <div className="text-base font-black text-primary">{t.name}</div>
+              <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t.role}</div>
+              <p className="text-xs text-foreground"><b>Ưu điểm:</b> {t.pros}</p>
+              <p className="mt-1 text-xs text-muted-foreground"><b>Hạn chế:</b> {t.cons}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+            🖼️ Minh chứng thực tế ({bai5Images.length} ảnh)
+          </div>
+          <a
+            href={bai5Report.url}
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+          >
+            ⬇️ Tải file báo cáo (.docx)
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {bai5Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 5 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
-        <Block label="🔬 Phân tích vai trò AI vs. con người">
+        <Block label="🔬 Vai trò AI vs. con người">
           <ul className="space-y-1">
-            <li>• <b>AI</b>: gợi ý outline, tạo ảnh minh họa, đọc giọng, dịch phụ đề.</li>
-            <li>• <b>Con người</b>: chọn chủ đề, kiểm chứng nội dung, biên tập, cá nhân hóa.</li>
-            <li>• Sản phẩm tốt = <b>AI tăng tốc</b> + <b>con người kiểm soát chất lượng</b>.</li>
+            <li>• <b>AI</b>: rút ngắn thời gian tạo bản nháp, gợi ý cấu trúc nội dung và sinh nhiều phương án hình ảnh, bố cục.</li>
+            <li>• <b>Con người</b>: đặt yêu cầu, chọn lọc thông tin, sắp xếp trình tự, kiểm chứng và chịu trách nhiệm về sản phẩm.</li>
+            <li>• Kết quả tốt = <b>AI tăng tốc</b> + <b>tư duy phản biện của người dùng</b>.</li>
           </ul>
         </Block>
         <Block label="💡 Bài học">
           <ul className="space-y-1">
-            <li>• AI là công cụ hỗ trợ sáng tạo, <b>không thay thế</b> tư duy cá nhân.</li>
-            <li>• Cần <b>chọn lọc, biên tập</b> và chịu trách nhiệm với nội dung mình tạo ra.</li>
-            <li>• Ghi chú rõ phần nào có sử dụng AI để đảm bảo minh bạch.</li>
+            <li>• Prompt rõ ràng, có ràng buộc (độ dài, phong cách, đối tượng) quyết định phần lớn chất lượng đầu ra.</li>
+            <li>• Cần chuyển nội dung AI từ <b>mô tả dài</b> sang <b>hành động ngắn</b> để phù hợp infographic.</li>
+            <li>• Sao chép nguyên câu trả lời AI hoặc dùng dữ kiện chưa đối chiếu làm giảm độ tin cậy của sản phẩm.</li>
           </ul>
         </Block>
       </div>
+
       <EvalAndIntegrity
         good={[
-          "Sản phẩm AI được cá nhân hoá, không giữ nguyên bản gốc.",
-          "Kết hợp nhiều công cụ (Canva, CapCut, Midjourney) hợp lý.",
-          "Ý tưởng bám sát chủ đề học tập, dễ hiểu với người xem.",
+          "Kết hợp hợp lý 3 công cụ AI ở 3 khâu: nội dung, hình ảnh, bố cục.",
+          "Nội dung chuyển thành 5 bước hành động ngắn gọn, đúng chuẩn infographic.",
+          "Bố cục trực quan, ưu tiên khoảng trắng và biểu tượng đơn giản.",
         ]}
         improve={[
-          "Chất lượng ảnh AI đôi lúc chưa đồng đều về phong cách.",
-          "Cần rút ngắn video để giữ sự chú ý ở mạng xã hội.",
+          "Một số hình do Microsoft Designer sinh còn nhiều chi tiết, cần lọc kỹ hơn.",
+          "Gợi ý bố cục tự động của Canva AI vẫn phải căn chỉnh lại thủ công.",
         ]}
         lesson={[
-          "Prompt tốt quyết định 70% chất lượng sản phẩm AI.",
-          "Bước hiệu chỉnh thủ công là bắt buộc để tạo dấu ấn cá nhân.",
-          "Tôn trọng bản quyền hình ảnh và nhạc nền khi dùng AI.",
+          "AI hỗ trợ ý tưởng và bản nháp, không thay thế tư duy phản biện.",
+          "Kiểm chứng thông tin qua tối thiểu 3 nguồn trước khi công bố.",
+          "Luôn tự viết kết luận bằng ngôn ngữ của mình và ghi nguồn khi cần.",
         ]}
         aiUsage={[
-          "Midjourney/DALL·E tạo ảnh minh hoạ theo storyboard tự viết.",
-          "ChatGPT hỗ trợ viết kịch bản, cá nhân điều chỉnh giọng văn.",
-          "CapCut + Runway hỗ trợ dựng, tôi cắt ghép và lồng tiếng cuối.",
+          "ChatGPT: xây khung 5 bước, sau đó cá nhân rút gọn và chuyển sang dạng hành động.",
+          "Microsoft Designer: tạo hình minh họa AI/nguồn/đối chiếu theo prompt tiếng Anh.",
+          "Canva AI: gợi ý bố cục 5 bước, cá nhân căn chỉnh cỡ chữ, biểu tượng và khoảng cách.",
         ]}
         commitments={[
-          "Khai báo rõ công cụ AI trong phần mô tả sản phẩm.",
-          "Không dùng ảnh/nhạc vi phạm bản quyền trong sản phẩm.",
-          "Ghi credit cho các tài nguyên mở đã sử dụng.",
+          "Khai báo rõ các công cụ AI đã dùng trong mô tả sản phẩm.",
+          "Đối chiếu dữ kiện AI với nguồn học thuật/chính thức trước khi sử dụng.",
+          "Tôn trọng bản quyền hình ảnh, biểu tượng và tài nguyên mở đã dùng.",
         ]}
       />
     </ProjectShell>
