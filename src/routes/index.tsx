@@ -1197,6 +1197,32 @@ function Project6() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Xác định rõ 7 nguyên tắc dùng AI cá nhân, dễ áp dụng.",
+          "Phân biệt được phần tự làm và phần AI hỗ trợ trong bài.",
+          "Luôn kiểm chứng thông tin AI trả về trước khi trích dẫn.",
+        ]}
+        improve={[
+          "Cần khai báo chi tiết hơn về prompt và mô hình đã dùng.",
+          "Bổ sung ví dụ tình huống vi phạm để tự cảnh báo.",
+        ]}
+        lesson={[
+          "AI là công cụ hỗ trợ, không thay thế tư duy cá nhân.",
+          "Trung thực học thuật quan trọng hơn kết quả nhanh.",
+          "Ghi rõ nguồn AI giúp bài viết đáng tin cậy hơn.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT để gợi ý cấu trúc bộ nguyên tắc.",
+          "Dùng Gemini để đối chiếu ví dụ đạo đức AI.",
+          "Toàn bộ nội dung cuối cùng do cá nhân biên tập lại.",
+        ]}
+        commitments={[
+          "Không sao chép nguyên văn đầu ra AI vào bài nộp.",
+          "Ghi chú rõ đoạn nào có AI hỗ trợ, đoạn nào tự viết.",
+          "Sẵn sàng chịu trách nhiệm với mọi nội dung đã công bố.",
+        ]}
+      />
     </ProjectShell>
   );
 }
