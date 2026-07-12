@@ -289,6 +289,30 @@ function PortfolioPage() {
                 ))}
               </ul>
             </div>
+            <div className="rounded-3xl border border-border bg-card p-6 shadow-card">
+              <h4 className="text-lg font-bold">🚀 Mục tiêu học tập</h4>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                {[
+                  "Nắm vững nền tảng công nghệ số và tư duy dữ liệu để ứng dụng vào ngành Kinh tế Quốc tế.",
+                  "Sử dụng thành thạo các công cụ AI (ChatGPT, Gemini, Copilot…) như một trợ lý học tập có trách nhiệm.",
+                  "Rèn luyện tư duy phản biện: biết đặt câu hỏi, kiểm chứng thông tin và không lệ thuộc vào AI.",
+                  "Phát triển kỹ năng tự học suốt đời, sẵn sàng thích nghi với môi trường số toàn cầu.",
+                ].map((m) => (
+                  <li key={m} className="flex gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                    <span>{m}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-secondary/10 p-6 shadow-card">
+              <h4 className="text-lg font-bold">✨ Câu nói tâm đắc</h4>
+              <blockquote className="mt-3 border-l-4 border-primary pl-4 text-base italic leading-relaxed text-foreground">
+                “Công nghệ và AI không thay thế con người — nó chỉ thay thế những ai ngừng học hỏi.
+                Vì vậy, mình chọn học mỗi ngày, để làm chủ công cụ thay vì bị công cụ dẫn dắt.”
+              </blockquote>
+              <p className="mt-3 text-right text-xs font-semibold uppercase tracking-wider text-primary">— Kim chỉ nam của bản thân</p>
+            </div>
           </div>
         </div>
       </Section>
