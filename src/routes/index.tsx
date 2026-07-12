@@ -32,6 +32,16 @@ import bai3Img7 from "@/assets/bai3/img7.png.asset.json";
 import bai3Img8 from "@/assets/bai3/img8.png.asset.json";
 import bai3Img9 from "@/assets/bai3/img9.png.asset.json";
 import bai3Report from "@/assets/bai3/report.docx.asset.json";
+import bai4Img1 from "@/assets/bai4/img1.png.asset.json";
+import bai4Img2 from "@/assets/bai4/img2.png.asset.json";
+import bai4Img3 from "@/assets/bai4/img3.png.asset.json";
+import bai4Img4 from "@/assets/bai4/img4.jpg.asset.json";
+import bai4Img5 from "@/assets/bai4/img5.jpg.asset.json";
+import bai4Img6 from "@/assets/bai4/img6.jpg.asset.json";
+import bai4Img7 from "@/assets/bai4/img7.jpg.asset.json";
+import bai4Report from "@/assets/bai4/report.docx.asset.json";
+
+const bai4Images = [bai4Img1, bai4Img2, bai4Img3, bai4Img4, bai4Img5, bai4Img6, bai4Img7];
 
 const bai3Images = [bai3Img1, bai3Img2, bai3Img3, bai3Img4, bai3Img5, bai3Img6, bai3Img7, bai3Img8, bai3Img9];
 
@@ -1434,16 +1444,41 @@ function Project4() {
         </table>
       </div>
 
-      <EvidenceGallery
-        items={[
-          { title: "Bảng Trello – các cột To do / Doing / Done" },
-          { title: "Trang Notion phân công nhóm" },
-          { title: "Google Docs cộng tác thời gian thực" },
-          { title: "Lịch họp nhóm trên Google Calendar" },
-          { title: "Meeting Zoom / Google Meet đang diễn ra" },
-          { title: "Biên bản họp và nhật ký công việc" },
-        ]}
-      />
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+            🖼️ Minh chứng thực tế ({bai4Images.length} ảnh)
+          </div>
+          <a
+            href={bai4Report.url}
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+          >
+            ⬇️ Tải file báo cáo (.docx)
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {bai4Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 4 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích quy trình">
