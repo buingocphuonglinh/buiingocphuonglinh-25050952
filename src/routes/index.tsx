@@ -254,13 +254,14 @@ function PortfolioPage() {
                 loading="lazy"
               />
             </div>
-            <h3 className="mt-4 text-center text-xl font-bold">[Điền tên của bạn]</h3>
-            <p className="text-center text-sm text-muted-foreground">Sinh viên năm nhất</p>
+            <h3 className="mt-4 text-center text-xl font-bold">Bùi Ngọc Phương Linh</h3>
+            <p className="text-center text-sm text-muted-foreground">Sinh viên năm nhất · MSV 25050952</p>
             <ul className="mt-5 space-y-2 text-sm">
-              <Info label="Ngành học" value="[Điền ngành học]" />
-              <Info label="Trường / lớp" value="[Điền trường / lớp]" />
+              <Info label="Khoa" value="Kinh tế Quốc tế" />
+              <Info label="Lớp" value="QH-2025-E KTQT 2" />
+              <Info label="Trường" value="ĐH Kinh tế – ĐHQGHN" />
               <Info label="Môn học" value="Nhập môn CNS & AI" />
-              <Info label="Email" value="[email@example.com]" />
+              <Info label="Email" value="25050952@vnu.edu.vn" />
             </ul>
           </div>
           <div className="reveal space-y-4">
