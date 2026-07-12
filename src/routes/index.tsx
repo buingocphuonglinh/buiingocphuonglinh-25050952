@@ -398,86 +398,8 @@ function PortfolioPage() {
         </div>
       </Section>
 
-      {/* ================= SKILLS ================= */}
-      <Section id="ky-nang" eyebrow="Skills" title="Bảng tổng hợp kỹ năng đạt được" subtitle="Hệ thống hoá năng lực số theo 4 nhóm chức năng — mỗi kỹ năng gắn với mức độ thành thạo và ngữ cảnh ứng dụng cụ thể.">
-        {/* Chỉ số tổng quan */}
-        <div className="reveal mb-8 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl border border-border bg-card p-5 shadow-card">
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">Tổng số kỹ năng</div>
-            <div className="mt-1 text-3xl font-bold">{skills.length}</div>
-          </div>
-          <div className="rounded-2xl border border-border bg-card p-5 shadow-card">
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">Mức trung bình</div>
-            <div className="mt-1 text-3xl font-bold">
-              {Math.round(skills.reduce((a, b) => a + b.level, 0) / skills.length)}%
-            </div>
-          </div>
-          <div className="rounded-2xl border border-border bg-card p-5 shadow-card">
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">Nhóm năng lực</div>
-            <div className="mt-1 text-3xl font-bold">{skillGroupOrder.length}</div>
-          </div>
-        </div>
 
-        {/* Chú giải thang đo */}
-        <div className="reveal mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-muted/40 px-4 py-3 text-xs text-muted-foreground">
-          <span className="font-semibold text-foreground">Thang đo:</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-6 rounded-full bg-muted-foreground/30" />Cơ bản (&lt;88%)</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-6 rounded-full bg-secondary" />Vững (88–92%)</span>
-          <span className="inline-flex items-center gap-1.5"><span className="h-2 w-6 rounded-full gradient-primary" />Thành thạo (≥93%)</span>
-        </div>
 
-        {/* Nhóm kỹ năng */}
-        <div className="space-y-8">
-          {skillGroupOrder.map((group) => {
-            const items = skills.filter((s) => s.group === group);
-            if (!items.length) return null;
-            const avg = Math.round(items.reduce((a, b) => a + b.level, 0) / items.length);
-            return (
-              <div key={group} className="reveal rounded-3xl border border-border bg-card p-6 shadow-card">
-                <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl" aria-hidden>{skillGroupIcon[group]}</span>
-                    <div>
-                      <h3 className="text-lg font-bold">{group}</h3>
-                      <p className="text-xs text-muted-foreground">{items.length} kỹ năng · TB {avg}%</p>
-                    </div>
-                  </div>
-                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
-                    {items.length} / {skills.length}
-                  </span>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                  {items.map((s, idx) => (
-                    <div key={s.name} className="rounded-xl border border-border/70 bg-background/60 p-4">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="flex items-start gap-2">
-                          <span className="mt-0.5 min-w-[1.75rem] rounded-md bg-muted px-1.5 py-0.5 text-center text-[11px] font-mono font-bold text-muted-foreground">
-                            {String(idx + 1).padStart(2, "0")}
-                          </span>
-                          <h4 className="font-semibold leading-snug">{s.name}</h4>
-                        </div>
-                        <span className="shrink-0 rounded-full bg-secondary/20 px-2 py-0.5 text-xs font-bold text-secondary-foreground">
-                          {s.level}%
-                        </span>
-                      </div>
-                      <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted">
-                        <div className="h-full gradient-primary transition-all" style={{ width: `${s.level}%` }} />
-                      </div>
-                      <div className="mt-2 flex items-center justify-between text-[11px]">
-                        <span className="font-medium text-secondary-foreground/80">{skillLabel(s.level)}</span>
-                      </div>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        <b className="text-foreground">Ứng dụng:</b> {s.use}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
 
       {/* ================= CONCLUSION ================= */}
       <Section id="tong-ket" eyebrow="Conclusion" title="Tổng kết hành trình" subtitle="Tự đánh giá quá trình thực hiện Portfolio, khó khăn, khắc phục và định hướng tương lai.">
