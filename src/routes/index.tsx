@@ -726,7 +726,16 @@ function Project2() {
         </div>
       </div>
 
-      <EvidenceBox label="Ảnh kết quả tìm kiếm áp dụng các toán tử nâng cao" />
+      <EvidenceGallery
+        items={[
+          { title: "Kết quả Google Scholar với toán tử site:" },
+          { title: "Truy vấn dùng dấu ngoặc kép \"...\" tìm chính xác" },
+          { title: "Kết hợp AND / OR để mở rộng phạm vi" },
+          { title: "Lọc theo filetype:pdf tài liệu học thuật" },
+          { title: "Bảng đánh giá độ tin cậy 5 nguồn" },
+          { title: "Trích dẫn APA cho nguồn đã chọn" },
+        ]}
+      />
 
       <div className="mt-6">
         <h4 className="mb-2 text-sm font-black uppercase tracking-wider text-primary">📋 Bảng đánh giá nguồn</h4>
