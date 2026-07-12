@@ -863,6 +863,32 @@ function Project2() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Áp dụng thành thạo toán tử site:, filetype:, \"...\", AND/OR.",
+          "Đánh giá độ tin cậy nguồn theo 4 tiêu chí rõ ràng.",
+          "Ưu tiên nguồn học thuật bình duyệt và tổ chức quốc tế.",
+        ]}
+        improve={[
+          "Cần tìm hiểu thêm database chuyên ngành (Scopus, WoS).",
+          "Bổ sung kỹ thuật trích dẫn APA/IEEE bằng Zotero.",
+        ]}
+        lesson={[
+          "Từ khoá tốt tiết kiệm 80% thời gian tìm tài liệu.",
+          "Không nguồn nào tuyệt đối đúng — cần đối chiếu chéo.",
+          "Blog cá nhân chỉ nên dùng làm gợi ý, không làm dẫn chứng.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT gợi ý từ khoá tiếng Anh chuyên ngành.",
+          "Dùng AI tóm tắt nhanh bài báo dài để sàng lọc trước khi đọc.",
+          "Không dùng AI thay thế cho việc đọc và trích dẫn gốc.",
+        ]}
+        commitments={[
+          "Luôn kiểm tra bản gốc trước khi trích dẫn tài liệu.",
+          "Không bịa nguồn hoặc trích dẫn nguồn chưa đọc.",
+          "Ghi rõ khi AI được dùng để hỗ trợ tìm kiếm.",
+        ]}
+      />
     </ProjectShell>
   );
 }
