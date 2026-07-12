@@ -626,6 +626,82 @@ function EvidenceGallery({
   );
 }
 
+/**
+ * EvalAndIntegrity — khối "Phân tích - Đánh giá" + "Liêm chính học thuật & Sử dụng AI"
+ * dùng chung cho cuối mỗi bài tập. Nội dung khác nhau ở từng bài.
+ */
+function EvalAndIntegrity({
+  good,
+  improve,
+  lesson,
+  aiUsage,
+  commitments,
+}: {
+  good: string[];
+  improve: string[];
+  lesson: string[];
+  aiUsage: string[];
+  commitments: string[];
+}) {
+  return (
+    <div className="mt-8 space-y-6">
+      <div>
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>📊</span><span>Phân tích – Đánh giá</span>
+        </h4>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-emerald-700 dark:text-emerald-400">
+              <span>✅</span><span>Điểm tốt</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {good.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-amber-700 dark:text-amber-400">
+              <span>🛠️</span><span>Cần cải thiện</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {improve.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-sky-500/30 bg-sky-500/5 p-4">
+            <h5 className="mb-2 flex items-center gap-2 text-sm font-bold text-sky-700 dark:text-sky-400">
+              <span>💡</span><span>Bài học rút ra</span>
+            </h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {lesson.map((x, i) => <li key={i}>• {x}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-border bg-muted/30 p-5">
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>🎓</span><span>Liêm chính học thuật & Sử dụng AI</span>
+        </h4>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div>
+            <h5 className="mb-2 text-sm font-bold text-foreground">Cách tôi sử dụng AI:</h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {aiUsage.map((x, i) => <li key={i}>→ {x}</li>)}
+            </ul>
+          </div>
+          <div>
+            <h5 className="mb-2 text-sm font-bold text-foreground">Cam kết liêm chính:</h5>
+            <ul className="space-y-1.5 text-sm text-muted-foreground">
+              {commitments.map((x, i) => <li key={i}>☑ {x}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
