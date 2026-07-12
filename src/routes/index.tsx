@@ -940,7 +940,16 @@ function Project4() {
         </table>
       </div>
 
-      <EvidenceBox label="Ảnh chụp bảng Trello/Notion phân công nhóm" />
+      <EvidenceGallery
+        items={[
+          { title: "Bảng Trello – các cột To do / Doing / Done" },
+          { title: "Trang Notion phân công nhóm" },
+          { title: "Google Docs cộng tác thời gian thực" },
+          { title: "Lịch họp nhóm trên Google Calendar" },
+          { title: "Meeting Zoom / Google Meet đang diễn ra" },
+          { title: "Biên bản họp và nhật ký công việc" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích quy trình">
