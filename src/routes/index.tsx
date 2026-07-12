@@ -1007,7 +1007,16 @@ function Project5() {
         </div>
       </div>
 
-      <EvidenceBox label="Video sản phẩm hoặc ảnh infographic (nhúng YouTube/Drive)" />
+      <EvidenceGallery
+        items={[
+          { title: "Storyboard nội dung do AI phác thảo" },
+          { title: "Infographic tạo bằng Canva + AI" },
+          { title: "Ảnh minh họa AI (Midjourney / DALL·E)" },
+          { title: "Video ngắn dựng bằng CapCut / Runway" },
+          { title: "Bản chỉnh sửa cá nhân sau đầu ra AI" },
+          { title: "Ảnh chụp link sản phẩm đã đăng tải" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích vai trò AI vs. con người">
