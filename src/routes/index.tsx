@@ -129,7 +129,7 @@ function PortfolioPage() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <a href="#home" className="flex items-center gap-2 font-bold">
             <span className="grid h-9 w-9 place-items-center rounded-xl gradient-primary text-white shadow-soft">P</span>
-            <span className="text-sm sm:text-base">Portfolio KTS</span>
+            <span className="text-sm sm:text-base">Portfolio<br /></span>
           </a>
           <nav className="hidden gap-1 md:flex">
             {nav.map((n) => (
