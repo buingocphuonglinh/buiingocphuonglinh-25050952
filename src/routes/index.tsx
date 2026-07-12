@@ -467,9 +467,9 @@ function PortfolioPage() {
                 <li>MSV: <b className="text-foreground">25050952</b></li>
                 <li>Lớp: <b className="text-foreground">QH-2025-E KTQT 2</b></li>
                 <li>Khoa: <b className="text-foreground">Kinh tế Quốc tế – ĐH Kinh tế, ĐHQGHN</b></li>
-                <li>Môn học: <b className="text-foreground">Nhập môn CNS & AI</b></li>
-                <li>Năm học: <b className="text-foreground">2025 – 2026</b></li>
-                <li>Email: <b className="text-foreground">25050952@vnu.edu.vn</b></li>
+                <li><br /></li>
+                <li><br /></li>
+                <li><br /></li>
               </ul>
             </div>
             <div className="text-sm">
@@ -484,7 +484,7 @@ function PortfolioPage() {
             </div>
           </div>
           <div className="mt-8 border-t border-border pt-4 text-center text-xs text-muted-foreground">
-            © 2026 Portfolio Kỹ thuật số cá nhân — Made with 💗 & 🌿
+            © 2026 Portfolio Kỹ thuật số cá nhân&nbsp;
           </div>
         </div>
       </footer>
