@@ -559,6 +559,73 @@ function EvidenceBox({ label }: { label: string }) {
   );
 }
 
+/**
+ * EvidenceGallery — khung ảnh minh chứng đặt cuối mỗi bài tập.
+ * Hiển thị lưới ảnh có số thứ tự, đủ rộng để nhìn rõ, có thể bấm phóng to.
+ * Truyền `items` là mảng { title, src? }. Nếu chưa có src sẽ hiện placeholder.
+ */
+function EvidenceGallery({
+  title = "ẢNH MINH CHỨNG THỰC HÀNH",
+  items,
+}: {
+  title?: string;
+  items: { title: string; src?: string }[];
+}) {
+  return (
+    <div className="mt-6 rounded-3xl border border-border bg-muted/30 p-4 sm:p-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <h4 className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>📸</span>
+          <span>{title} ({items.length} ảnh)</span>
+        </h4>
+        <span className="text-[11px] font-medium text-muted-foreground">Bấm vào ảnh để phóng to nét</span>
+      </div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <figure
+            key={i}
+            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <a
+              href={it.src ?? "#"}
+              target={it.src ? "_blank" : undefined}
+              rel={it.src ? "noreferrer" : undefined}
+              className="block"
+              onClick={(e) => { if (!it.src) e.preventDefault(); }}
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-muted to-muted/40">
+                {it.src ? (
+                  <img
+                    src={it.src}
+                    alt={it.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className="grid h-full w-full place-items-center">
+                    <div className="flex flex-col items-center gap-1 text-center">
+                      <div className="text-4xl opacity-60">🖼️</div>
+                      <span className="rounded-full bg-white/80 px-2.5 py-0.5 text-[10px] font-semibold text-muted-foreground backdrop-blur">
+                        Thay bằng ảnh thật
+                      </span>
+                    </div>
+                  </div>
+                )}
+                <span className="absolute left-2 top-2 grid h-7 min-w-7 place-items-center rounded-full bg-primary px-2 text-[11px] font-black text-primary-foreground shadow-soft">
+                  {i + 1}
+                </span>
+              </div>
+            </a>
+            <figcaption className="border-t border-border/60 px-3 py-2.5 text-[13px] font-semibold leading-snug text-foreground">
+              {i + 1}. {it.title}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
