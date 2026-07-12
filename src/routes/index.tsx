@@ -268,7 +268,7 @@ function PortfolioPage() {
             <div className="rounded-3xl border border-border bg-card p-6 shadow-card">
               <h4 className="text-lg font-bold">💡 Sở thích cá nhân</h4>
               <div className="mt-3 flex flex-wrap gap-2">
-                {["Công nghệ số", "Khám phá AI", "Sáng tạo nội dung", "Quản lý dữ liệu", "Làm việc nhóm", "Học thuật"].map((t) => (
+                {["Công nghệ số", "Khám phá AI", "Sáng tạo nội dung", "Quản lý dữ liệu", "Làm việc nhóm", "Học thuật", "Đọc sách", "Viết lách", "Chụp ảnh", "Du lịch khám phá", "Nghe nhạc acoustic", "Xem phim", "Cắm hoa", "Pha chế & thưởng trà", "Trang trí sổ tay", "Yoga & chạy bộ", "Thời trang tối giản", "Học ngoại ngữ", "Thiện nguyện", "Nấu ăn"].map((t) => (
                   <span key={t} className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">{t}</span>
                 ))}
               </div>
