@@ -1110,6 +1110,32 @@ function Project5() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Sản phẩm AI được cá nhân hoá, không giữ nguyên bản gốc.",
+          "Kết hợp nhiều công cụ (Canva, CapCut, Midjourney) hợp lý.",
+          "Ý tưởng bám sát chủ đề học tập, dễ hiểu với người xem.",
+        ]}
+        improve={[
+          "Chất lượng ảnh AI đôi lúc chưa đồng đều về phong cách.",
+          "Cần rút ngắn video để giữ sự chú ý ở mạng xã hội.",
+        ]}
+        lesson={[
+          "Prompt tốt quyết định 70% chất lượng sản phẩm AI.",
+          "Bước hiệu chỉnh thủ công là bắt buộc để tạo dấu ấn cá nhân.",
+          "Tôn trọng bản quyền hình ảnh và nhạc nền khi dùng AI.",
+        ]}
+        aiUsage={[
+          "Midjourney/DALL·E tạo ảnh minh hoạ theo storyboard tự viết.",
+          "ChatGPT hỗ trợ viết kịch bản, cá nhân điều chỉnh giọng văn.",
+          "CapCut + Runway hỗ trợ dựng, tôi cắt ghép và lồng tiếng cuối.",
+        ]}
+        commitments={[
+          "Khai báo rõ công cụ AI trong phần mô tả sản phẩm.",
+          "Không dùng ảnh/nhạc vi phạm bản quyền trong sản phẩm.",
+          "Ghi credit cho các tài nguyên mở đã sử dụng.",
+        ]}
+      />
     </ProjectShell>
   );
 }
