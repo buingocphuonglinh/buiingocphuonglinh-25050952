@@ -386,6 +386,7 @@ function PortfolioPage() {
             <h3 className="mt-4 text-center text-xl font-bold">Bùi Ngọc Phương Linh</h3>
             <p className="text-center text-sm text-muted-foreground">Sinh viên năm nhất · MSV 25050952</p>
             <ul className="mt-5 space-y-2 text-sm">
+              <Info label="MSV" value="25050952" />
               <Info label="Khoa" value="Kinh tế Quốc tế" />
               <Info label="Lớp" value="QH-2025-E KTQT 2" />
               <Info label="Trường" value="ĐH Kinh tế – ĐHQGHN" />
