@@ -180,7 +180,7 @@ function PortfolioPage() {
     { href: "#gioi-thieu", label: "Giới thiệu" },
     { href: "#tong-quan", label: "Tổng quan" },
     { href: "#du-an", label: "Dự án" },
-    { href: "#minh-chung", label: "Minh chứng" },
+    
     
     { href: "#tong-ket", label: "Tổng kết" },
   ];
@@ -480,31 +480,6 @@ function PortfolioPage() {
         </div>
       </Section>
 
-      {/* ================= EVIDENCE GALLERY ================= */}
-      <Section id="minh-chung" eyebrow="Evidence Gallery" title="Thư viện minh chứng" subtitle="Tập hợp các minh chứng trực quan cho từng nhiệm vụ. Thay ảnh placeholder bằng ảnh thật khi nộp bài.">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: "📁", title: "Cấu trúc thư mục học tập", desc: "Ảnh chụp cây thư mục có phân cấp và quy tắc đặt tên." },
-            { icon: "🔎", title: "Kết quả tìm kiếm học thuật", desc: "Ảnh minh chứng sử dụng toán tử tìm kiếm nâng cao." },
-            { icon: "💬", title: "So sánh Prompt", desc: "Bảng so sánh prompt ban đầu và prompt cải tiến." },
-            { icon: "🤝", title: "Bảng công việc nhóm", desc: "Ảnh chụp bảng Trello / Notion phân công công việc." },
-            { icon: "🎨", title: "Sản phẩm nội dung AI", desc: "Video / infographic tạo bằng AI kèm chỉnh sửa cá nhân." },
-            { icon: "🛡️", title: "Bộ nguyên tắc sử dụng AI", desc: "Infographic 7 nguyên tắc cá nhân dùng AI có trách nhiệm." },
-          ].map((c) => (
-            <article key={c.title} className="reveal group overflow-hidden rounded-3xl border border-border bg-card shadow-card card-hover">
-              <div className="relative aspect-[4/3] overflow-hidden gradient-hero">
-                <div className="absolute inset-0 grid place-items-center text-7xl opacity-60 transition group-hover:scale-110">{c.icon}</div>
-                <span className="absolute left-3 top-3 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold backdrop-blur">Placeholder</span>
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold">{c.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
-                <button className="mt-3 text-sm font-semibold text-primary hover:underline">Xem chi tiết →</button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
 
 
 
