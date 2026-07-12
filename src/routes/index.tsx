@@ -756,6 +756,31 @@ function Project1() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Thực hiện đầy đủ các thao tác cơ bản với tệp và thư mục.",
+          "Chụp màn hình chi tiết từng bước làm minh chứng.",
+          "Tổ chức cấu trúc thư mục khoa học, dễ quản lý.",
+        ]}
+        improve={[
+          "Cần tìm hiểu thêm phím tắt File Explorer để thao tác nhanh.",
+          "Học cách dùng tính năng tìm kiếm nâng cao trong Explorer.",
+        ]}
+        lesson={[
+          "Quản lý tệp có tổ chức giúp tiết kiệm thời gian tìm kiếm.",
+          "Biết dùng Recycle Bin để khôi phục tệp đã xoá nhầm.",
+          "Shortcut giúp truy cập nhanh các thư mục thường dùng.",
+        ]}
+        aiUsage={[
+          "Không sử dụng AI trong bài tập này.",
+          "Tự thực hành trực tiếp trên máy theo hướng dẫn giảng viên.",
+        ]}
+        commitments={[
+          "Tự thực hiện tất cả thao tác trên máy tính cá nhân.",
+          "Ảnh chụp màn hình là minh chứng thực tế từ quá trình làm.",
+          "Toàn bộ báo cáo được viết dựa trên trải nghiệm thực tế.",
+        ]}
+      />
     </ProjectShell>
   );
 }
