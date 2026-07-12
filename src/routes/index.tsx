@@ -559,6 +559,73 @@ function EvidenceBox({ label }: { label: string }) {
   );
 }
 
+/**
+ * EvidenceGallery — khung ảnh minh chứng đặt cuối mỗi bài tập.
+ * Hiển thị lưới ảnh có số thứ tự, đủ rộng để nhìn rõ, có thể bấm phóng to.
+ * Truyền `items` là mảng { title, src? }. Nếu chưa có src sẽ hiện placeholder.
+ */
+function EvidenceGallery({
+  title = "ẢNH MINH CHỨNG THỰC HÀNH",
+  items,
+}: {
+  title?: string;
+  items: { title: string; src?: string }[];
+}) {
+  return (
+    <div className="mt-6 rounded-3xl border border-border bg-muted/30 p-4 sm:p-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <h4 className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
+          <span>📸</span>
+          <span>{title} ({items.length} ảnh)</span>
+        </h4>
+        <span className="text-[11px] font-medium text-muted-foreground">Bấm vào ảnh để phóng to nét</span>
+      </div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <figure
+            key={i}
+            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <a
+              href={it.src ?? "#"}
+              target={it.src ? "_blank" : undefined}
+              rel={it.src ? "noreferrer" : undefined}
+              className="block"
+              onClick={(e) => { if (!it.src) e.preventDefault(); }}
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-muted to-muted/40">
+                {it.src ? (
+                  <img
+                    src={it.src}
+                    alt={it.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className="grid h-full w-full place-items-center">
+                    <div className="flex flex-col items-center gap-1 text-center">
+                      <div className="text-4xl opacity-60">🖼️</div>
+                      <span className="rounded-full bg-white/80 px-2.5 py-0.5 text-[10px] font-semibold text-muted-foreground backdrop-blur">
+                        Thay bằng ảnh thật
+                      </span>
+                    </div>
+                  </div>
+                )}
+                <span className="absolute left-2 top-2 grid h-7 min-w-7 place-items-center rounded-full bg-primary px-2 text-[11px] font-black text-primary-foreground shadow-soft">
+                  {i + 1}
+                </span>
+              </div>
+            </a>
+            <figcaption className="border-t border-border/60 px-3 py-2.5 text-[13px] font-semibold leading-snug text-foreground">
+              {i + 1}. {it.title}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
@@ -585,7 +652,16 @@ function Project1() {
         </Block>
       </div>
 
-      <EvidenceBox label="Ảnh chụp cấu trúc thư mục học tập" />
+      <EvidenceGallery
+        items={[
+          { title: "Ảnh chụp cây thư mục gốc NMCNS_AI_2026" },
+          { title: "4 thư mục con: Bài tập / Tài liệu / Hình ảnh / Sản phẩm" },
+          { title: "Ví dụ tệp đặt tên đúng quy ước phiên bản" },
+          { title: "Đồng bộ Google Drive – trạng thái backup" },
+          { title: "Đồng bộ OneDrive trên thiết bị cá nhân" },
+          { title: "So sánh trước – sau khi chuẩn hoá thư mục" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích">
@@ -650,7 +726,16 @@ function Project2() {
         </div>
       </div>
 
-      <EvidenceBox label="Ảnh kết quả tìm kiếm áp dụng các toán tử nâng cao" />
+      <EvidenceGallery
+        items={[
+          { title: "Kết quả Google Scholar với toán tử site:" },
+          { title: "Truy vấn dùng dấu ngoặc kép \"...\" tìm chính xác" },
+          { title: "Kết hợp AND / OR để mở rộng phạm vi" },
+          { title: "Lọc theo filetype:pdf tài liệu học thuật" },
+          { title: "Bảng đánh giá độ tin cậy 5 nguồn" },
+          { title: "Trích dẫn APA cho nguồn đã chọn" },
+        ]}
+      />
 
       <div className="mt-6">
         <h4 className="mb-2 text-sm font-black uppercase tracking-wider text-primary">📋 Bảng đánh giá nguồn</h4>
@@ -742,7 +827,16 @@ function Project3() {
         </div>
       </div>
 
-      <EvidenceBox label="Ảnh chụp kết quả 2 phiên bản prompt trên ChatGPT/Gemini" />
+      <EvidenceGallery
+        items={[
+          { title: "Prompt V1 (đơn giản) – kết quả ChatGPT" },
+          { title: "Prompt V2 (chi tiết, có vai trò) – kết quả ChatGPT" },
+          { title: "So sánh cùng prompt trên Gemini" },
+          { title: "Bảng đánh giá 4 tiêu chí chất lượng đầu ra" },
+          { title: "Ảnh chú thích các thành phần trong prompt tốt" },
+          { title: "Ghi chú bài học rút ra sau nhiều lần thử" },
+        ]}
+      />
 
       <div className="mt-6">
         <h4 className="mb-2 text-sm font-black uppercase tracking-wider text-primary">📋 Bảng so sánh Prompt</h4>
@@ -846,7 +940,16 @@ function Project4() {
         </table>
       </div>
 
-      <EvidenceBox label="Ảnh chụp bảng Trello/Notion phân công nhóm" />
+      <EvidenceGallery
+        items={[
+          { title: "Bảng Trello – các cột To do / Doing / Done" },
+          { title: "Trang Notion phân công nhóm" },
+          { title: "Google Docs cộng tác thời gian thực" },
+          { title: "Lịch họp nhóm trên Google Calendar" },
+          { title: "Meeting Zoom / Google Meet đang diễn ra" },
+          { title: "Biên bản họp và nhật ký công việc" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích quy trình">
@@ -904,7 +1007,16 @@ function Project5() {
         </div>
       </div>
 
-      <EvidenceBox label="Video sản phẩm hoặc ảnh infographic (nhúng YouTube/Drive)" />
+      <EvidenceGallery
+        items={[
+          { title: "Storyboard nội dung do AI phác thảo" },
+          { title: "Infographic tạo bằng Canva + AI" },
+          { title: "Ảnh minh họa AI (Midjourney / DALL·E)" },
+          { title: "Video ngắn dựng bằng CapCut / Runway" },
+          { title: "Bản chỉnh sửa cá nhân sau đầu ra AI" },
+          { title: "Ảnh chụp link sản phẩm đã đăng tải" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích vai trò AI vs. con người">
@@ -982,7 +1094,16 @@ function Project6() {
         </div>
       </div>
 
-      <EvidenceBox label="Infographic bộ nguyên tắc sử dụng AI cá nhân" />
+      <EvidenceGallery
+        items={[
+          { title: "Infographic 7 nguyên tắc dùng AI có trách nhiệm" },
+          { title: "Ví dụ prompt vi phạm & prompt cải thiện" },
+          { title: "Ảnh chụp phần khai báo dùng AI trong bài" },
+          { title: "Bảng phân biệt phần tự làm và phần AI hỗ trợ" },
+          { title: "Cam kết trung thực học thuật cá nhân" },
+          { title: "Ghi chú kiểm chứng thông tin AI trả về" },
+        ]}
+      />
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích – Tư duy phản biện">
