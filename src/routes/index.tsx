@@ -379,7 +379,7 @@ function PortfolioPage() {
               <img
                 src={studentAvatar.url}
                 alt="Ảnh sinh viên"
-                className="h-full w-full object-cover scale-125"
+                className="h-full w-full object-cover scale-110"
                 loading="lazy"
               />
             </div>
