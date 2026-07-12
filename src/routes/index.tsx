@@ -962,6 +962,32 @@ function Project3() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "So sánh có hệ thống 2 phiên bản prompt trên cùng chủ đề.",
+          "Áp dụng công thức Vai trò – Ngữ cảnh – Yêu cầu – Định dạng.",
+          "Đầu ra V2 rõ ràng, đúng ý và dễ tái sử dụng hơn V1.",
+        ]}
+        improve={[
+          "Cần thử thêm mô hình khác (Claude) để đối chiếu kết quả.",
+          "Bổ sung ví dụ prompt phản mẫu (anti-pattern) để tránh.",
+        ]}
+        lesson={[
+          "Prompt càng cụ thể, đầu ra càng chất lượng.",
+          "Đặt vai trò cho AI giúp tăng độ chuyên môn hoá.",
+          "Luôn kiểm chứng thông tin AI bằng nguồn thứ hai.",
+        ]}
+        aiUsage={[
+          "ChatGPT và Gemini là đối tượng thử nghiệm chính.",
+          "Prompt do cá nhân thiết kế, chỉnh sửa qua nhiều vòng.",
+          "Kết luận và đánh giá đầu ra hoàn toàn do cá nhân viết.",
+        ]}
+        commitments={[
+          "Không dùng đầu ra AI làm bài mẫu để nộp trực tiếp.",
+          "Ghi lại prompt gốc để có thể tái hiện kết quả.",
+          "Trích dẫn nguồn khi trích lại thông tin AI cung cấp.",
+        ]}
+      />
     </ProjectShell>
   );
 }
