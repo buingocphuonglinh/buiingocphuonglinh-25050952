@@ -819,6 +819,37 @@ function Project1() {
         </Block>
       </div>
 
+      <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
+        <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
+        <p className="mb-4 text-sm text-muted-foreground">
+          Thực hành 12 thao tác nền tảng trên <b>File Explorer</b> (Windows) theo đúng quy trình quản lý dữ liệu số.
+        </p>
+        <ol className="grid gap-2 text-sm sm:grid-cols-2">
+          {[
+            ["Mở File Explorer", "Win + E hoặc biểu tượng thư mục trên thanh tác vụ."],
+            ["Truy cập ổ đĩa", "This PC → chọn ổ D:/E: (hoặc thư mục Documents nếu chỉ có ổ C:)."],
+            ["Tạo thư mục gốc", "Chuột phải → New → Folder → đặt tên ThucHanh_hotensinhvien."],
+            ["Vào thư mục vừa tạo", "Nhấp đúp mở thư mục ThucHanh_NguyenVanA."],
+            ["Tạo tệp văn bản", "New → Text Document → GhiChu.txt."],
+            ["Đổi tên tệp", "Rename → GhiChuQuanTrong.txt."],
+            ["Tạo thư mục con", "New → Folder → TaiLieu."],
+            ["Sao chép (Copy)", "Ctrl + C → mở TaiLieu → Ctrl + V để dán bản sao."],
+            ["Di chuyển (Cut)", "Tạo DiChuyen.txt → Ctrl + X → dán vào TaiLieu."],
+            ["Xoá vào Thùng rác", "Chuột phải → Delete: tệp vào Recycle Bin."],
+            ["Xoá vĩnh viễn", "Shift + Delete: tệp bị xoá không qua Thùng rác."],
+            ["Khôi phục dữ liệu", "Recycle Bin → Restore để đưa tệp về vị trí gốc."],
+          ].map(([t, d], i) => (
+            <li key={i} className="flex gap-3 rounded-xl border border-border bg-card/60 p-3">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary/15 text-xs font-black text-primary">{i + 1}</span>
+              <span><b>{t}:</b> <span className="text-muted-foreground">{d}</span></span>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-4 rounded-xl bg-primary/10 p-3 text-xs">
+          <b>Chốt lại:</b> Nắm vững chu trình <i>Tạo → Đổi tên → Sao chép → Di chuyển → Xoá → Khôi phục</i> là nền tảng để quản lý dữ liệu học tập khoa học, tránh mất mát và dễ đồng bộ đám mây.
+        </p>
+      </div>
+
       <EvidenceGallery
         items={[
           { title: "Ảnh chụp cây thư mục gốc NMCNS_AI_2026" },
@@ -895,6 +926,47 @@ function Project2() {
         <Block label="🛠️ Công cụ sử dụng">
           Google Search, Google Scholar, thư viện số trường đại học, báo cáo PDF của tổ chức quốc tế.
         </Block>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
+        <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
+        <p className="text-sm">
+          <b>Chủ đề nghiên cứu:</b> <i>Tác động của các Hiệp định Thương mại Tự do thế hệ mới (CPTPP &amp; EVFTA) đến dòng vốn FDI vào Việt Nam giai đoạn 2019–2026.</i>
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="mb-1 font-bold text-primary">🔍 Quy trình tìm kiếm đa tầng</div>
+            <ul className="space-y-1 text-muted-foreground">
+              <li>• CSDL học thuật: <b>Google Scholar</b>, <b>ScienceDirect</b>.</li>
+              <li>• Chuỗi Boolean: <code className="rounded bg-muted px-1">("CPTPP" OR "EVFTA") AND "FDI" AND "Vietnam"</code>.</li>
+              <li>• Nguồn thứ cấp: <b>GSO</b> (Tổng cục Thống kê), <b>World Bank Open Data</b>.</li>
+              <li>• Tiêu chí: peer-reviewed hoặc báo cáo chính thống từ định chế tài chính toàn cầu.</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="mb-1 font-bold text-primary">📚 10 nguồn tiêu biểu đã thẩm định</div>
+            <ul className="space-y-1 text-muted-foreground">
+              <li>• Bài báo KH: Le &amp; Nguyen (2021), Tran (2022), Phan (2023), Đào (2022).</li>
+              <li>• Báo cáo quốc tế: <b>UNCTAD WIR 2024</b>, <b>IMF Article IV 2024</b>, <b>World Bank 2023</b>.</li>
+              <li>• Số liệu gốc: <b>GSO – Niên giám thống kê 2024</b>.</li>
+              <li>• Sách &amp; luận án: Baker (2023) – Pearson, Nguyen M.H. (2020) – NEU.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4 text-sm">
+          <div className="mb-2 font-bold">⭐ Top nguồn theo thang <b>CRAAP</b> (1–5)</div>
+          <div className="grid gap-2 sm:grid-cols-3 text-xs">
+            <div className="rounded-lg bg-card/70 p-2"><b>UNCTAD 2024</b> — 5.0 ⭐⭐⭐⭐⭐</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>IMF 2024</b> — 4.9 ⭐⭐⭐⭐⭐</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>Le &amp; Nguyen 2021</b> — 4.8 ⭐⭐⭐⭐⭐</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>Baker 2023</b> — 4.7 ⭐⭐⭐⭐⭐</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>World Bank 2023</b> — 4.6 ⭐⭐⭐⭐</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>Tran 2022 / GSO 2025</b> — 4.5 ⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p className="mt-4 rounded-xl bg-primary/10 p-3 text-xs">
+          <b>Kết luận:</b> FTA thế hệ mới là "cú hích" thu hút FDI chất lượng cao (công nghệ, quản trị hiện đại). Kỹ năng <i>tìm kiếm Boolean + thẩm định CRAAP</i> giúp phân biệt <b>nguồn gốc</b>, <b>nguồn thứ cấp</b> và <b>nguồn tổng hợp</b>, đảm bảo tính khách quan cho nghiên cứu.
+        </p>
       </div>
 
       <div className="mt-6">
@@ -1022,6 +1094,45 @@ function Project3() {
         <Block label="🛠️ Công cụ sử dụng">
           ChatGPT, Gemini, Claude.
         </Block>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
+        <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
+        <p className="text-sm">
+          Thử nghiệm chiến lược <b>Prompt Engineering</b> trên 3 tác vụ học tập ngành Kinh tế, so sánh 3 cấp độ prompt: <i>Cơ bản → Cải tiến → Nâng cao</i>.
+        </p>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">Tác vụ 1</div>
+            <div className="font-semibold">Tóm tắt bài đọc học thuật</div>
+            <p className="mt-1 text-xs text-muted-foreground">"Tác động của EVFTA đến FDI tại Việt Nam" — Kỹ thuật <b>Role + Chain-of-Thought + Structural Output</b> (bảng Markdown).</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">Tác vụ 2</div>
+            <div className="font-semibold">Giải thích khái niệm phức tạp</div>
+            <p className="mt-1 text-xs text-muted-foreground">"Bẫy thu nhập trung bình" — Kỹ thuật <b>Few-shot + Analogy Prompting</b> (ẩn dụ vận động viên).</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">Tác vụ 3</div>
+            <div className="font-semibold">Tạo bộ câu hỏi ôn tập</div>
+            <p className="mt-1 text-xs text-muted-foreground">"Cung – Cầu &amp; Thuế" — Kỹ thuật <b>Deliberative Prompting + Feedback Loop</b>, câu hỏi tình huống thực tế (hạn hán Brazil, giá cà phê).</p>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4">
+          <div className="mb-2 text-sm font-bold">🧭 Nguyên tắc <b>"4C"</b> đúc rút từ thực nghiệm</div>
+          <div className="grid gap-2 sm:grid-cols-2 text-xs">
+            <div className="rounded-lg bg-card/70 p-2"><b>C – Context</b>: Xác định vai trò và mục đích cuối của tác vụ.</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>C – Clarity</b>: Động từ mạnh, chia nhỏ nhiệm vụ phức tạp.</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>C – Constraints</b>: Định dạng, số từ, điều AI <i>không</i> được làm.</div>
+            <div className="rounded-lg bg-card/70 p-2"><b>C – Constructive Examples</b>: Dữ liệu/phong cách mẫu (few-shot).</div>
+          </div>
+        </div>
+
+        <p className="mt-4 rounded-xl bg-primary/10 p-3 text-xs">
+          <b>Kết luận:</b> Nâng cấp prompt không phải là "viết dài hơn" mà là cung cấp <b>khung tư duy logic</b> cho AI — buộc AI truy xuất kiến thức chuyên sâu, thực hiện các bước trung gian và trả kết quả đúng định dạng cần dùng.
+        </p>
       </div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -1153,6 +1264,55 @@ function Project4() {
         <Block label="🛠️ Công cụ sử dụng">
           Trello (kanban), Notion (tài liệu), Google Sheets (bảng tiến độ), Microsoft Planner.
         </Block>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
+        <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
+        <p className="text-sm">
+          Dự án nhóm kéo dài 1 tuần — vai trò <b>thành viên phụ trách nội dung và quản lý tài liệu</b>. Sử dụng bộ 3 công cụ Google tạo thành một <i>hệ sinh thái làm việc số</i>.
+        </p>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">📝 Google Docs</div>
+            <div className="font-semibold">Xử lý nội dung</div>
+            <p className="mt-1 text-xs text-muted-foreground">Cộng tác thời gian thực; Comment, Suggestion mode, Version History để minh bạch đóng góp.</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">📂 Google Drive</div>
+            <div className="font-semibold">Quản lý tài nguyên</div>
+            <p className="mt-1 text-xs text-muted-foreground">Thư mục phân cấp <i>Dự án → Nội dung → Chi tiết</i>; quy tắc đặt tên <code className="rounded bg-muted px-1">NoiDung_Nhom_Ngay_Phienban</code>; phân quyền view/edit.</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="text-xs font-bold text-primary">🎥 Google Meet</div>
+            <div className="font-semibold">Điều phối giao tiếp</div>
+            <p className="mt-1 text-xs text-muted-foreground">Họp đồng bộ, chia sẻ màn hình, thống nhất nội dung trước khi chỉnh sửa tài liệu.</p>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4">
+          <div className="mb-2 text-sm font-bold">🔬 Phân tích 4 góc nhìn hệ thống</div>
+          <ul className="grid gap-1 text-xs sm:grid-cols-2">
+            <li>• <b>Năng suất</b>: từ quy trình tuần tự → real-time collaboration; giảm <i>information latency</i> và <i>coordination cost</i>.</li>
+            <li>• <b>Cộng tác</b>: hình thành <i>collaborative intelligence</i> qua co-creation, minh bạch đóng góp.</li>
+            <li>• <b>Quản trị tri thức</b>: Drive như <i>knowledge repository</i>, tái sử dụng và bảo toàn dữ liệu.</li>
+            <li>• <b>Giao tiếp</b>: mô hình <i>hybrid</i> — kết hợp đồng bộ (Meet) &amp; phi đồng bộ (Docs/Drive).</li>
+          </ul>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-border bg-card/60 p-4">
+          <div className="mb-2 text-sm font-bold">⚠️ 4 thách thức → giải pháp</div>
+          <ul className="space-y-1 text-xs text-muted-foreground">
+            <li>• <b>Xung đột nội dung khi cộng tác real-time</b> → phân chia phạm vi, dùng Suggestion mode, chốt qua Meet.</li>
+            <li>• <b>Thiếu cấu trúc quản lý tài liệu</b> → thư mục nhiều cấp, quy tắc đặt tên thống nhất, phân quyền rõ.</li>
+            <li>• <b>Giao tiếp không đồng đều</b> → tăng tần suất họp, chia sẻ màn hình, tóm tắt sau họp vào Docs.</li>
+            <li>• <b>Phụ thuộc công nghệ</b> → chuẩn bị offline, lưu Drive, ghi chú lại khi mất kết nối.</li>
+          </ul>
+        </div>
+
+        <p className="mt-4 rounded-xl bg-primary/10 p-3 text-xs">
+          <b>Bài học:</b> Hiệu quả không nằm ở công cụ mà ở <b>cách tổ chức</b> và <b>ý thức phối hợp</b>. Kết hợp đồng bộ + phi đồng bộ là chìa khoá tối ưu năng suất nhóm.
+        </p>
       </div>
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
@@ -1363,6 +1523,61 @@ function Project6() {
         <Block label="🛠️ Nguồn tham khảo">
           Tài liệu học thuật môn học, quy định nhà trường, hướng dẫn của UNESCO về AI trong giáo dục.
         </Block>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
+        <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
+        <p className="text-sm">
+          Nghiên cứu chính sách sử dụng AI trong giáo dục đại học, thực hiện nhiệm vụ học tập có sự hỗ trợ của AI và phân tích các vấn đề đạo đức liên quan.
+        </p>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="mb-1 font-bold text-primary">📜 Chính sách AI trong ĐH</div>
+            <ul className="space-y-1 text-xs text-muted-foreground">
+              <li>• AI là <b>công cụ hỗ trợ</b>, không thay thế tư duy.</li>
+              <li>• Cho phép dùng AI cho ý tưởng, dàn ý, chỉnh sửa ngôn ngữ.</li>
+              <li>• Không sao chép nguyên văn sản phẩm AI để nộp bài.</li>
+              <li>• Minh bạch việc sử dụng AI khi được yêu cầu.</li>
+              <li>• Kiểm chứng thông tin AI bằng nguồn đáng tin cậy.</li>
+              <li>• Xu hướng quốc tế: <b>không cấm</b> — quản lý qua minh bạch &amp; trung thực học thuật.</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-border bg-card/60 p-4 text-sm">
+            <div className="mb-1 font-bold text-primary">🧪 Nhiệm vụ thực hành</div>
+            <p className="text-xs text-muted-foreground">
+              Chuẩn bị thuyết trình <i>"Tác động của AI đối với giáo dục đại học"</i> với 3 prompt ChatGPT:
+            </p>
+            <ul className="mt-1 space-y-1 text-xs">
+              <li>① Liệt kê 5 tác động tích cực + 5 tiêu cực.</li>
+              <li>② Xây dàn ý 10 slide.</li>
+              <li>③ Đề xuất giải pháp dùng AI có trách nhiệm.</li>
+            </ul>
+            <p className="mt-2 text-xs text-muted-foreground">
+              → Đánh giá – chỉnh sửa – bổ sung ví dụ thực tiễn tại VN – biên tập lại theo phong cách cá nhân.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4">
+          <div className="mb-2 text-sm font-bold">⚖️ 3 vấn đề đạo đức trọng tâm</div>
+          <ul className="grid gap-1 text-xs sm:grid-cols-3">
+            <li>• <b>Ranh giới hỗ trợ / gian lận</b>: nằm ở <i>mức độ tham gia thực sự</i> của người học.</li>
+            <li>• <b>Sở hữu trí tuệ &amp; trích dẫn</b>: AI có thể tạo tài liệu tham khảo <i>không tồn tại</i> → phải kiểm chứng.</li>
+            <li>• <b>Phát triển kỹ năng</b>: phụ thuộc AI làm giảm tư duy phản biện, viết học thuật &amp; sáng tạo.</li>
+          </ul>
+        </div>
+
+        <div className="mt-4 rounded-xl border border-border bg-card/60 p-4">
+          <div className="text-sm font-bold">📢 Trích dẫn AI mẫu</div>
+          <p className="mt-1 text-xs italic text-muted-foreground">
+            "Một phần nội dung ban đầu được xây dựng với sự hỗ trợ của ChatGPT. Tác giả đã kiểm chứng, chỉnh sửa và chịu trách nhiệm hoàn toàn đối với nội dung cuối cùng."
+          </p>
+        </div>
+
+        <p className="mt-4 rounded-xl bg-primary/10 p-3 text-center text-sm font-semibold italic text-primary">
+          "Học cùng AI – nhưng không ngừng tư duy."
+        </p>
       </div>
 
       <div className="mt-6">
