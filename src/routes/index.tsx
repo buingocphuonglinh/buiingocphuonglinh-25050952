@@ -1,6 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import studentAvatar from "@/assets/student-avatar.jpg.asset.json";
+import bai1Img1 from "@/assets/bai1/img1.png.asset.json";
+import bai1Img2 from "@/assets/bai1/img2.png.asset.json";
+import bai1Img3 from "@/assets/bai1/img3.png.asset.json";
+import bai1Img4 from "@/assets/bai1/img4.png.asset.json";
+import bai1Img5 from "@/assets/bai1/img5.png.asset.json";
+import bai1Img6 from "@/assets/bai1/img6.png.asset.json";
+import bai1Img7 from "@/assets/bai1/img7.png.asset.json";
+import bai1Img8 from "@/assets/bai1/img8.png.asset.json";
+import bai1Img9 from "@/assets/bai1/img9.png.asset.json";
+import bai1Img10 from "@/assets/bai1/img10.png.asset.json";
+import bai1Img11 from "@/assets/bai1/img11.png.asset.json";
+import bai1Img12 from "@/assets/bai1/img12.png.asset.json";
+import bai1Img13 from "@/assets/bai1/img13.png.asset.json";
+import bai1Img14 from "@/assets/bai1/img14.png.asset.json";
+import bai1Img15 from "@/assets/bai1/img15.png.asset.json";
+import bai1Img16 from "@/assets/bai1/img16.png.asset.json";
+import bai1Img17 from "@/assets/bai1/img17.png.asset.json";
+import bai1Img18 from "@/assets/bai1/img18.png.asset.json";
+import bai1Img19 from "@/assets/bai1/img19.png.asset.json";
+import bai1Img20 from "@/assets/bai1/img20.png.asset.json";
+import bai1Report from "@/assets/bai1/report.docx.asset.json";
+
+const bai1Images = [
+  bai1Img1, bai1Img2, bai1Img3, bai1Img4, bai1Img5,
+  bai1Img6, bai1Img7, bai1Img8, bai1Img9, bai1Img10,
+  bai1Img11, bai1Img12, bai1Img13, bai1Img14, bai1Img15,
+  bai1Img16, bai1Img17, bai1Img18, bai1Img19, bai1Img20,
+];
 
 
 export const Route = createFileRoute("/")({
