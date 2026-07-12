@@ -321,7 +321,7 @@ function PortfolioPage() {
 
                 <div className="mt-5 flex items-center gap-4">
                   <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-primary/40 bg-[#3d4a2a]">
-                    <img src={studentAvatar.url} alt="Ảnh đại diện" className="h-full w-full object-cover scale-125" loading="lazy" />
+                    <img src={studentAvatar.url} alt="Ảnh đại diện" className="h-full w-full object-cover scale-110" loading="lazy" />
                   </div>
                   <div className="min-w-0">
                     <h3 className="truncate text-lg font-bold">Bùi Ngọc Phương Linh</h3>
