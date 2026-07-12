@@ -1044,6 +1044,32 @@ function Project4() {
           </ul>
         </Block>
       </div>
+      <EvalAndIntegrity
+        good={[
+          "Phân công công việc rõ ràng theo năng lực từng thành viên.",
+          "Sử dụng Trello/Notion giúp tiến độ minh bạch, dễ theo dõi.",
+          "Họp nhóm định kỳ có biên bản, tránh trùng lặp công việc.",
+        ]}
+        improve={[
+          "Một số buổi họp còn kéo dài do chưa có agenda cụ thể.",
+          "Cần thống nhất quy ước đặt tên file khi cộng tác.",
+        ]}
+        lesson={[
+          "Giao tiếp chủ động quan trọng hơn công cụ đang dùng.",
+          "Deadline nội bộ nên đặt sớm hơn deadline chính thức.",
+          "Ghi nhận đóng góp cá nhân giúp nhóm gắn kết hơn.",
+        ]}
+        aiUsage={[
+          "Dùng ChatGPT để gợi ý mẫu biên bản họp nhóm.",
+          "Dùng AI dịch nhanh tài liệu tham khảo tiếng Anh.",
+          "Không dùng AI để thay thế trao đổi giữa các thành viên.",
+        ]}
+        commitments={[
+          "Đóng góp trung thực, không nhận công của thành viên khác.",
+          "Ghi nhận rõ phần việc AI hỗ trợ trong tài liệu nhóm.",
+          "Bảo mật thông tin nội bộ của nhóm khi trao đổi.",
+        ]}
+      />
     </ProjectShell>
   );
 }
