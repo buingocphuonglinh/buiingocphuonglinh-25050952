@@ -180,7 +180,7 @@ function PortfolioPage() {
     { href: "#gioi-thieu", label: "Giới thiệu" },
     { href: "#tong-quan", label: "Tổng quan" },
     { href: "#du-an", label: "Dự án" },
-    { href: "#minh-chung", label: "Minh chứng" },
+    
     
     { href: "#tong-ket", label: "Tổng kết" },
   ];
