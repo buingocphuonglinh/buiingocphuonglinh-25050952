@@ -827,7 +827,16 @@ function Project3() {
         </div>
       </div>
 
-      <EvidenceBox label="Ảnh chụp kết quả 2 phiên bản prompt trên ChatGPT/Gemini" />
+      <EvidenceGallery
+        items={[
+          { title: "Prompt V1 (đơn giản) – kết quả ChatGPT" },
+          { title: "Prompt V2 (chi tiết, có vai trò) – kết quả ChatGPT" },
+          { title: "So sánh cùng prompt trên Gemini" },
+          { title: "Bảng đánh giá 4 tiêu chí chất lượng đầu ra" },
+          { title: "Ảnh chú thích các thành phần trong prompt tốt" },
+          { title: "Ghi chú bài học rút ra sau nhiều lần thử" },
+        ]}
+      />
 
       <div className="mt-6">
         <h4 className="mb-2 text-sm font-black uppercase tracking-wider text-primary">📋 Bảng so sánh Prompt</h4>
