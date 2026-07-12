@@ -1209,16 +1209,41 @@ function Project3() {
         </div>
       </div>
 
-      <EvidenceGallery
-        items={[
-          { title: "Prompt V1 (đơn giản) – kết quả ChatGPT" },
-          { title: "Prompt V2 (chi tiết, có vai trò) – kết quả ChatGPT" },
-          { title: "So sánh cùng prompt trên Gemini" },
-          { title: "Bảng đánh giá 4 tiêu chí chất lượng đầu ra" },
-          { title: "Ảnh chú thích các thành phần trong prompt tốt" },
-          { title: "Ghi chú bài học rút ra sau nhiều lần thử" },
-        ]}
-      />
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+            🖼️ Minh chứng thực tế ({bai3Images.length} ảnh)
+          </div>
+          <a
+            href={bai3Report.url}
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+          >
+            ⬇️ Tải file báo cáo (.docx)
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {bai3Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 3 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
 
       <div className="mt-6">
         <h4 className="mb-2 text-sm font-black uppercase tracking-wider text-primary">📋 Bảng so sánh Prompt</h4>
