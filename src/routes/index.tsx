@@ -40,6 +40,9 @@ import bai4Img5 from "@/assets/bai4/img5.jpg.asset.json";
 import bai4Img6 from "@/assets/bai4/img6.jpg.asset.json";
 import bai4Img7 from "@/assets/bai4/img7.jpg.asset.json";
 import bai4Report from "@/assets/bai4/report.docx.asset.json";
+import bai2Img1 from "@/assets/bai2/img1.jpg.asset.json";
+import bai2Img2 from "@/assets/bai2/img2.jpg.asset.json";
+import bai2Img3 from "@/assets/bai2/img3.jpg.asset.json";
 import bai5Img1 from "@/assets/bai5/img1.jpeg.asset.json";
 import bai5Img2 from "@/assets/bai5/img2.jpeg.asset.json";
 import bai5Img3 from "@/assets/bai5/img3.jpeg.asset.json";
@@ -49,6 +52,7 @@ import bai5Img6 from "@/assets/bai5/img6.png.asset.json";
 import bai5Report from "@/assets/bai5/report.docx.asset.json";
 
 const bai4Images = [bai4Img1, bai4Img2, bai4Img3, bai4Img4, bai4Img5, bai4Img6, bai4Img7];
+const bai2Images = [bai2Img1, bai2Img2, bai2Img3];
 const bai5Images = [bai5Img1, bai5Img2, bai5Img3, bai5Img4, bai5Img5, bai5Img6];
 
 const bai3Images = [bai3Img1, bai3Img2, bai3Img3, bai3Img4, bai3Img5, bai3Img6, bai3Img7, bai3Img8, bai3Img9];
@@ -1109,6 +1113,33 @@ function Project2() {
             <li>• Kết hợp toán tử là cách khai thác công cụ tìm kiếm hiệu quả nhất.</li>
           </ul>
         </Block>
+      </div>
+
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+          🖼️ Minh chứng thực tế ({bai2Images.length} ảnh)
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {bai2Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 2 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[3/4] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
       <EvalAndIntegrity
         good={[
