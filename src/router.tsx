@@ -4,7 +4,17 @@ import { routeTree } from "./routeTree.gen";
 
 const getBasepath = () => {
   const baseUrl = import.meta.env.BASE_URL || "/";
-  return baseUrl === "/" ? "/" : baseUrl.replace(/\/$/, "");
+
+  if (baseUrl && baseUrl !== "/" && baseUrl !== "./") {
+    return baseUrl.replace(/\/$/, "");
+  }
+
+  if (typeof window !== "undefined" && window.location.hostname.endsWith("github.io")) {
+    const [repoName] = window.location.pathname.split("/").filter(Boolean);
+    return repoName ? `/${repoName}` : "/";
+  }
+
+  return "/";
 };
 
 export const getRouter = () => {

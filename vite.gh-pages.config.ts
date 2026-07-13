@@ -12,9 +12,14 @@ import path from "node:path";
 const ASSET_ORIGIN =
   process.env.ASSET_ORIGIN || "https://buingocphuonglinh.lovable.app";
 
-// BASE_PATH for GitHub Pages project sites, e.g. "/my-repo/".
-// Set via env in GitHub Actions. Defaults to "/" for local preview.
-const BASE = process.env.BASE_PATH || "/";
+const GH_REDIRECT_SCRIPT = `
+(function () {
+  var pathParts = location.pathname.split('/').filter(Boolean);
+  var isGithubPages = location.hostname.endsWith('github.io');
+  var root = isGithubPages && pathParts.length ? '/' + pathParts[0] + '/' : '/';
+  sessionStorage.setItem('gh_redirect', location.href);
+  location.replace(root);
+})();`;
 
 // Vite plugin: rewrite the `url` field of every `.asset.json` file at load
 // time so the built bundle contains absolute URLs pointing at Lovable's CDN.
@@ -46,12 +51,13 @@ function githubPagesFallback() {
       const dist = path.resolve("dist");
       const index = path.join(dist, "index.html");
       if (fs.existsSync(index)) {
-        // 404.html contains a small script that stashes the requested URL and
-        // reloads the SPA root, so refresh/deep-link doesn't show GH's 404.
+        // 404.html stashes the requested URL and reloads the GitHub Pages
+        // project root. The root is detected at runtime so manual builds still
+        // work even when BASE_PATH was not provided.
         const html = fs.readFileSync(index, "utf8");
         const injected = html.replace(
           "<head>",
-          `<head>\n<script>sessionStorage.setItem("gh_redirect", location.href);location.replace("${BASE}");</script>`,
+          `<head>\n<script>${GH_REDIRECT_SCRIPT}</script>`,
         );
         fs.writeFileSync(path.join(dist, "404.html"), injected);
       }
@@ -61,7 +67,9 @@ function githubPagesFallback() {
 }
 
 export default defineConfig({
-  base: BASE,
+  // Relative asset paths make the same dist folder work under any GitHub
+  // Pages repository URL instead of requiring a hard-coded /repo/ base.
+  base: "./",
   plugins: [
     rewriteAssetJson(),
     TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
