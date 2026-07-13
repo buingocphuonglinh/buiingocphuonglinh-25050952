@@ -1379,34 +1379,8 @@ function Project4() {
         </p>
       </div>
 
-      <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
-        <table className="w-full text-left text-sm">
-          <thead className="bg-accent">
-            <tr>
-              {["Thành viên", "Nhiệm vụ", "Hạn", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 font-bold">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {members.map((m) => (
-              <tr key={m.name} className="border-t border-border">
-                <td className="p-3 font-semibold">{m.name}</td>
-                <td className="p-3 text-muted-foreground">{m.task}</td>
-                <td className="p-3 text-muted-foreground">{m.due}</td>
-                <td className="p-3">
-                  <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${
-                    m.status === "Hoàn thành" ? "bg-secondary/30 text-secondary-foreground"
-                      : m.status === "Đang làm" ? "bg-primary/20 text-primary"
-                      : "bg-muted text-muted-foreground"
-                  }`}>{m.status}</span>
-                </td>
-                <td className="p-3 text-muted-foreground">{m.note}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
+
 
       <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
