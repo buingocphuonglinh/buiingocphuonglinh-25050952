@@ -50,10 +50,15 @@ import bai5Img4 from "@/assets/bai5/img4.jpeg.asset.json";
 import bai5Img5 from "@/assets/bai5/img5.jpeg.asset.json";
 import bai5Img6 from "@/assets/bai5/img6.png.asset.json";
 import bai5Report from "@/assets/bai5/report.docx.asset.json";
+import bai6Img1 from "@/assets/bai6/img1.jpg.asset.json";
+import bai6Img2 from "@/assets/bai6/img2.jpg.asset.json";
+import bai6Img3 from "@/assets/bai6/img3.jpg.asset.json";
+import bai6Report from "@/assets/bai6/report.pdf.asset.json";
 
 const bai4Images = [bai4Img1, bai4Img2, bai4Img3, bai4Img4, bai4Img5, bai4Img6, bai4Img7];
 const bai2Images = [bai2Img1, bai2Img2, bai2Img3];
 const bai5Images = [bai5Img1, bai5Img2, bai5Img3, bai5Img4, bai5Img5, bai5Img6];
+const bai6Images = [bai6Img1, bai6Img2, bai6Img3];
 
 const bai3Images = [bai3Img1, bai3Img2, bai3Img3, bai3Img4, bai3Img5, bai3Img6, bai3Img7, bai3Img8, bai3Img9];
 
@@ -1837,16 +1842,43 @@ function Project6() {
         </div>
       </div>
 
-      <EvidenceGallery
-        items={[
-          { title: "Infographic 7 nguyên tắc dùng AI có trách nhiệm" },
-          { title: "Ví dụ prompt vi phạm & prompt cải thiện" },
-          { title: "Ảnh chụp phần khai báo dùng AI trong bài" },
-          { title: "Bảng phân biệt phần tự làm và phần AI hỗ trợ" },
-          { title: "Cam kết trung thực học thuật cá nhân" },
-          { title: "Ghi chú kiểm chứng thông tin AI trả về" },
-        ]}
-      />
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+            🖼️ Minh chứng thực tế ({bai6Images.length} ảnh)
+          </div>
+          <a
+            href={bai6Report.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
+          >
+            ⬇️ Tải file báo cáo (.pdf)
+          </a>
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {bai6Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 6 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích – Tư duy phản biện">
