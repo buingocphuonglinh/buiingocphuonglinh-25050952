@@ -453,32 +453,39 @@ function PortfolioPage() {
 
       {/* ================= TIMELINE / OVERVIEW ================= */}
       <Section id="tong-quan" eyebrow="Project Overview" title="Hành trình 6 nhiệm vụ" subtitle="Timeline học tập gồm 6 nhiệm vụ tương ứng với 6 bài tập cuối kỳ.">
-        <div className="relative">
-          <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary via-secondary to-primary md:block" />
-          <ol className="space-y-6 md:space-y-10">
-            {tasks.map((t, i) => (
-              <li key={t.id} className={`reveal grid gap-4 md:grid-cols-2 md:gap-10 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                <div className={`rounded-3xl border border-border bg-card p-6 shadow-card card-hover ${i % 2 ? "md:text-left" : "md:text-right"}`}>
-                  <div className={`flex items-center gap-3 ${i % 2 ? "" : "md:justify-end"}`}>
-                    <span className="text-3xl">{t.icon}</span>
-                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">Nhiệm vụ {t.num}</span>
-                  </div>
-                  <h3 className="mt-3 text-xl font-bold">{t.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{t.short}</p>
-                  <div className={`mt-4 flex flex-wrap gap-2 ${i % 2 ? "" : "md:justify-end"}`}>
-                    {t.tags.map((tag) => (
-                      <span key={tag} className="rounded-full bg-secondary/20 px-2.5 py-1 text-xs font-medium text-secondary-foreground">{tag}</span>
-                    ))}
-                  </div>
-                  <a href={`#${t.id}`} className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline`}>
-                    Xem chi tiết →
-                  </a>
-                </div>
-                <div className="hidden md:block" />
-              </li>
-            ))}
-          </ol>
-        </div>
+        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {tasks.map((t) => (
+            <li
+              key={t.id}
+              className="reveal group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-card card-hover"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-2xl">{t.icon}</span>
+                <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary">
+                  #{t.num}
+                </span>
+              </div>
+              <h3 className="mt-3 text-base font-bold leading-snug">{t.title}</h3>
+              <p className="mt-1.5 line-clamp-2 text-xs text-muted-foreground">{t.short}</p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {t.tags.slice(0, 2).map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-secondary/20 px-2 py-0.5 text-[10px] font-medium text-secondary-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={`#${t.id}`}
+                className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+              >
+                Xem chi tiết →
+              </a>
+            </li>
+          ))}
+        </ol>
       </Section>
 
       {/* ================= PROJECTS ================= */}
