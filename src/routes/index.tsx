@@ -1162,7 +1162,7 @@ function Project2() {
         <div className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
           🖼️ Minh chứng thực tế ({bai2Images.length} ảnh)
         </div>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
           {bai2Images.map((img, i) => (
             <a
               key={i}
@@ -1177,7 +1177,7 @@ function Project2() {
                 loading="lazy"
                 className="aspect-[3/4] w-full object-cover transition group-hover:scale-105"
               />
-              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-1.5 py-0.5 text-[9px] font-black text-primary backdrop-blur">
                 #{String(i + 1).padStart(2, "0")}
               </span>
             </a>
