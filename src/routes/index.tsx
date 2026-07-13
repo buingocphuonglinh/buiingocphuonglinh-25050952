@@ -573,9 +573,9 @@ function PortfolioPage() {
                 <li>MSV: <b className="text-foreground">25050952</b></li>
                 <li>Lớp: <b className="text-foreground">QH-2025-E KTQT 2</b></li>
                 <li>Khoa: <b className="text-foreground">Kinh tế Quốc tế – ĐH Kinh tế, ĐHQGHN</b></li>
-                <li><br /></li>
-                <li><br /></li>
-                <li><br /></li>
+                <li>Email: <b className="text-foreground">25050952@vnu.edu.vn</b></li>
+                <li>Môn học: <b className="text-foreground">Nhập môn CNS & AI</b></li>
+                <li>Học kỳ: <b className="text-foreground">I – 2025/2026</b></li>
               </ul>
             </div>
             <div className="text-sm">
@@ -690,82 +690,8 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-function EvidenceBox({ label }: { label: string }) {
-  return (
-    <div className="mt-4 grid place-items-center rounded-2xl border-2 border-dashed border-border bg-muted/40 p-6 text-center">
-      <div className="text-3xl">🖼️</div>
-      <p className="mt-2 text-xs font-semibold text-muted-foreground">{label}</p>
-      <p className="text-[11px] text-muted-foreground">Thay bằng minh chứng thật khi nộp bài</p>
-    </div>
-  );
-}
 
-/**
- * EvidenceGallery — khung ảnh minh chứng đặt cuối mỗi bài tập.
- * Hiển thị lưới ảnh có số thứ tự, đủ rộng để nhìn rõ, có thể bấm phóng to.
- * Truyền `items` là mảng { title, src? }. Nếu chưa có src sẽ hiện placeholder.
- */
-function EvidenceGallery({
-  title = "ẢNH MINH CHỨNG THỰC HÀNH",
-  items,
-}: {
-  title?: string;
-  items: { title: string; src?: string }[];
-}) {
-  return (
-    <div className="mt-6 rounded-3xl border border-border bg-muted/30 p-4 sm:p-6">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-        <h4 className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-primary">
-          <span>📸</span>
-          <span>{title} ({items.length} ảnh)</span>
-        </h4>
-        <span className="text-[11px] font-medium text-muted-foreground">Bấm vào ảnh để phóng to nét</span>
-      </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((it, i) => (
-          <figure
-            key={i}
-            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card transition hover:-translate-y-0.5 hover:shadow-md"
-          >
-            <a
-              href={it.src ?? "#"}
-              target={it.src ? "_blank" : undefined}
-              rel={it.src ? "noreferrer" : undefined}
-              className="block"
-              onClick={(e) => { if (!it.src) e.preventDefault(); }}
-            >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-muted to-muted/40">
-                {it.src ? (
-                  <img
-                    src={it.src}
-                    alt={it.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                  />
-                ) : (
-                  <div className="grid h-full w-full place-items-center">
-                    <div className="flex flex-col items-center gap-1 text-center">
-                      <div className="text-4xl opacity-60">🖼️</div>
-                      <span className="rounded-full bg-white/80 px-2.5 py-0.5 text-[10px] font-semibold text-muted-foreground backdrop-blur">
-                        Thay bằng ảnh thật
-                      </span>
-                    </div>
-                  </div>
-                )}
-                <span className="absolute left-2 top-2 grid h-7 min-w-7 place-items-center rounded-full bg-primary px-2 text-[11px] font-black text-primary-foreground shadow-soft">
-                  {i + 1}
-                </span>
-              </div>
-            </a>
-            <figcaption className="border-t border-border/60 px-3 py-2.5 text-[13px] font-semibold leading-snug text-foreground">
-              {i + 1}. {it.title}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
-  );
-}
+
 
 /**
  * EvalAndIntegrity — khối "Phân tích - Đánh giá" + "Liêm chính học thuật & Sử dụng AI"
@@ -949,8 +875,8 @@ function Project1() {
           {[
             ["Mở File Explorer", "Win + E hoặc biểu tượng thư mục trên thanh tác vụ."],
             ["Truy cập ổ đĩa", "This PC → chọn ổ D:/E: (hoặc thư mục Documents nếu chỉ có ổ C:)."],
-            ["Tạo thư mục gốc", "Chuột phải → New → Folder → đặt tên ThucHanh_hotensinhvien."],
-            ["Vào thư mục vừa tạo", "Nhấp đúp mở thư mục ThucHanh_NguyenVanA."],
+            ["Tạo thư mục gốc", "Chuột phải → New → Folder → đặt tên ThucHanh_BuiNgocPhuongLinh."],
+            ["Vào thư mục vừa tạo", "Nhấp đúp mở thư mục ThucHanh_BuiNgocPhuongLinh."],
             ["Tạo tệp văn bản", "New → Text Document → GhiChu.txt."],
             ["Đổi tên tệp", "Rename → GhiChuQuanTrong.txt."],
             ["Tạo thư mục con", "New → Folder → TaiLieu."],
@@ -1038,10 +964,10 @@ function Project1() {
 // ============================================================
 function Project2() {
   const rows = [
-    { src: "Google Scholar", author: "Đại học nhiều nước", year: "2022–2024", trust: "Cao", why: "Bài báo bình duyệt, có trích dẫn.", limit: "Một số bài trả phí." },
-    { src: "Website ĐH (edu.vn)", author: "Giảng viên/Khoa CNTT", year: "2023", trust: "Cao", why: "Nguồn học thuật chính thống.", limit: "Cập nhật không đều." },
-    { src: "Báo cáo PDF của UNESCO", author: "UNESCO", year: "2023", trust: "Rất cao", why: "Tổ chức quốc tế, dữ liệu chuẩn.", limit: "Phạm vi rộng, cần chọn phần liên quan." },
-    { src: "Blog cá nhân", author: "Không rõ", year: "2021", trust: "Thấp", why: "Có góc nhìn thực tiễn.", limit: "Không có kiểm chứng, dễ chủ quan." },
+    { src: "Google Scholar", author: "Nhiều tác giả (bình duyệt)", year: "2022–2024", trust: "Cao", why: "Bài báo bình duyệt, có trích dẫn.", limit: "Một số bài trả phí." },
+    { src: "Cổng thông tin ĐH Kinh tế – ĐHQGHN (ueb.vnu.edu.vn)", author: "ĐH Kinh tế – ĐHQGHN", year: "2024", trust: "Cao", why: "Nguồn học thuật chính thống của trường.", limit: "Cập nhật không đều." },
+    { src: "Báo cáo AI in Education – UNESCO", author: "UNESCO", year: "2023", trust: "Rất cao", why: "Tổ chức quốc tế, dữ liệu chuẩn.", limit: "Phạm vi rộng, cần chọn phần liên quan." },
+    { src: "Blog cá nhân trên Medium", author: "Không rõ tác giả", year: "2021", trust: "Thấp", why: "Có góc nhìn thực tiễn.", limit: "Không có kiểm chứng, dễ chủ quan." },
   ];
   return (
     <ProjectShell id="task-2" num="02" icon="🔎" title={"Bài tập 2 – Tìm kiếm và đánh giá thông\u00a0\ntin học thuật"} tags={["Google Scholar", "Toán tử nâng cao", "Đánh giá nguồn"]}>
@@ -1849,8 +1775,7 @@ function Project6() {
           </div>
           <a
             href={bai6Report.url}
-            target="_blank"
-            rel="noreferrer"
+            download
             className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
           >
             ⬇️ Tải file báo cáo (.pdf)
