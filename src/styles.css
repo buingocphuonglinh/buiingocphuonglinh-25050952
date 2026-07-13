@@ -146,18 +146,22 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 18px;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4 {
     font-family: 'Fraunces', 'Be Vietnam Pro', serif;
     letter-spacing: -0.02em;
   }
+
 }
 
 /* Reveal on scroll */
