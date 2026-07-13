@@ -1333,7 +1333,7 @@ function Project4() {
       <div className="mt-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-secondary/10 p-6">
         <div className="mb-3 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">📄 Nội dung báo cáo chi tiết</div>
         <p className="text-sm">
-          Dự án nhóm kéo dài 1 tuần — vai trò <b>thành viên phụ trách nội dung và quản lý tài liệu</b>. Sử dụng bộ 3 công cụ Google tạo thành một <i>hệ sinh thái làm việc số</i>.
+          Dự án nhóm kéo dài 1 tuần — vai trò <b>thành viên phụ trách nội dung và quản lý tài liệu</b>. Sử dụng bộ 3 công cụ Google tạo thành một .
         </p>
 
         <div className="mt-4 grid gap-3 md:grid-cols-3">
