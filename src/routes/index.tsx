@@ -932,27 +932,26 @@ function Project1() {
       </div>
       <EvalAndIntegrity
         good={[
-          "Thực hiện đầy đủ các thao tác cơ bản với tệp và thư mục.",
-          "Chụp màn hình chi tiết từng bước làm minh chứng.",
-          "Tổ chức cấu trúc thư mục khoa học, dễ quản lý.",
+          "Làm xong hết 12 thao tác cơ bản trên máy cá nhân, không bỏ bước nào.",
+          "Chụp lại màn hình từng bước để lỡ quên còn xem lại được.",
+          "Cây thư mục môn học chia rõ theo tuần nên tìm bài cũ rất nhanh.",
+          "Đặt tên file có kèm ngày và phiên bản, khỏi bị nhầm bản cuối.",
         ]}
         improve={[
-          "Cần tìm hiểu thêm phím tắt File Explorer để thao tác nhanh.",
-          "Học cách dùng tính năng tìm kiếm nâng cao trong Explorer.",
+          "Mình vẫn quen nhấp chuột, chưa dùng nhiều phím tắt nên hơi chậm.",
+          "Chưa thử tính năng tìm kiếm nâng cao của Explorer, sẽ tập dần.",
         ]}
         lesson={[
-          "Quản lý tệp có tổ chức giúp tiết kiệm thời gian tìm kiếm.",
-          "Biết dùng Recycle Bin để khôi phục tệp đã xoá nhầm.",
-          "Shortcut giúp truy cập nhanh các thư mục thường dùng.",
+          "Trước đây mình để file bừa trên Desktop, học kỳ trước từng mất bài vì quên lưu ở đâu — lần này chịu khó sắp xếp thì đỡ hẳn.",
+          "Recycle Bin cứu mình một lần khi lỡ Delete nhầm file bài tập.",
+          "Có Shift + Delete thì cẩn thận, xoá xong không lấy lại được.",
         ]}
         aiUsage={[
-          "Không sử dụng AI trong bài tập này.",
-          "Tự thực hành trực tiếp trên máy theo hướng dẫn giảng viên.",
+          "Bài này mình không dùng AI, chỉ làm theo hướng dẫn trên lớp và tự bấm trên máy.",
         ]}
         commitments={[
-          "Tự thực hiện tất cả thao tác trên máy tính cá nhân.",
-          "Ảnh chụp màn hình là minh chứng thực tế từ quá trình làm.",
-          "Toàn bộ báo cáo được viết dựa trên trải nghiệm thực tế.",
+          "Mọi thao tác đều tự làm trên laptop của mình.",
+          "Ảnh minh chứng chụp trực tiếp trong lúc thực hành, không lấy trên mạng.",
         ]}
       />
     </ProjectShell>
@@ -1124,28 +1123,25 @@ function Project2() {
       </div>
       <EvalAndIntegrity
         good={[
-          "Áp dụng thành thạo toán tử site:, filetype:, \"...\", AND/OR.",
-          "Đánh giá độ tin cậy nguồn theo 4 tiêu chí rõ ràng.",
-          "Ưu tiên nguồn học thuật bình duyệt và tổ chức quốc tế.",
+          "Dùng được toán tử site:, filetype:, dấu nháy kép và AND/OR để lọc kết quả — thấy khác hẳn kiểu gõ cả câu như trước.",
+          "Có bảng đánh giá 4 nguồn theo tiêu chí tác giả / năm / độ tin cậy nên khi trích dẫn tự tin hơn.",
         ]}
         improve={[
-          "Cần tìm hiểu thêm database chuyên ngành (Scopus, WoS).",
-          "Bổ sung kỹ thuật trích dẫn APA/IEEE bằng Zotero.",
+          "Lần đầu mở Google Scholar mình khá lúng túng vì nhiều bài trả phí, cần thử vào thư viện số của trường để lấy bản full.",
+          "Chưa biết dùng phần mềm trích dẫn (Zotero, Mendeley), lần tới mình sẽ học.",
+          "Còn tra bằng từ khoá tiếng Việt là chính, tiếng Anh chuyên ngành mình vẫn ngại.",
         ]}
         lesson={[
-          "Từ khoá tốt tiết kiệm 80% thời gian tìm tài liệu.",
-          "Không nguồn nào tuyệt đối đúng — cần đối chiếu chéo.",
-          "Blog cá nhân chỉ nên dùng làm gợi ý, không làm dẫn chứng.",
+          "Chọn đúng từ khoá tiết kiệm rất nhiều thời gian — có lúc mình mò 30 phút không ra, đổi từ khoá là ra ngay.",
+          "Không phải cứ Google là đúng, có bài blog copy y hệt của báo chính thống nhưng bỏ mất phần nguồn.",
         ]}
         aiUsage={[
-          "Dùng ChatGPT gợi ý từ khoá tiếng Anh chuyên ngành.",
-          "Dùng AI tóm tắt nhanh bài báo dài để sàng lọc trước khi đọc.",
-          "Không dùng AI thay thế cho việc đọc và trích dẫn gốc.",
+          "Mình nhờ ChatGPT gợi ý từ khoá tiếng Anh khi bí, ví dụ đề tài 'thương mại điện tử xuyên biên giới'.",
+          "Có dùng AI để tóm tắt nhanh bài dài, nhưng phần trích dẫn vẫn mở bài gốc đọc lại.",
         ]}
         commitments={[
-          "Luôn kiểm tra bản gốc trước khi trích dẫn tài liệu.",
-          "Không bịa nguồn hoặc trích dẫn nguồn chưa đọc.",
-          "Ghi rõ khi AI được dùng để hỗ trợ tìm kiếm.",
+          "Chỉ trích dẫn tài liệu mình đã thực sự mở ra đọc.",
+          "Không lấy tóm tắt của AI làm nội dung chính, chỉ dùng để sàng lọc.",
         ]}
       />
     </ProjectShell>
@@ -1293,28 +1289,26 @@ function Project3() {
       </div>
       <EvalAndIntegrity
         good={[
-          "So sánh có hệ thống 2 phiên bản prompt trên cùng chủ đề.",
-          "Áp dụng công thức Vai trò – Ngữ cảnh – Yêu cầu – Định dạng.",
-          "Đầu ra V2 rõ ràng, đúng ý và dễ tái sử dụng hơn V1.",
+          "Viết được 2 phiên bản prompt cho cùng một chủ đề và so sánh trực tiếp — thấy rõ V2 đầy đủ và dễ dùng lại hơn.",
+          "Áp dụng đủ 4 phần: Vai trò – Ngữ cảnh – Yêu cầu – Định dạng.",
         ]}
         improve={[
-          "Cần thử thêm mô hình khác (Claude) để đối chiếu kết quả.",
-          "Bổ sung ví dụ prompt phản mẫu (anti-pattern) để tránh.",
+          "Mình mới thử trên ChatGPT và Gemini, chưa có tài khoản Claude nên chưa đối chiếu được.",
+          "Nên lưu lại các prompt hỏng để lần sau tránh, hiện mình mới ghi những prompt tốt.",
+          "Có lúc AI trả lời sai số liệu mà mình suýt tin luôn — sau đó phải mở nguồn kiểm tra lại mới phát hiện.",
         ]}
         lesson={[
-          "Prompt càng cụ thể, đầu ra càng chất lượng.",
-          "Đặt vai trò cho AI giúp tăng độ chuyên môn hoá.",
-          "Luôn kiểm chứng thông tin AI bằng nguồn thứ hai.",
+          "Prompt càng cụ thể thì đầu ra càng đúng ý — hỏi kiểu chung chung là câu trả lời cũng chung chung.",
+          "Đặt vai trò cho AI (kiểu 'bạn là giảng viên KTQT') giúp câu trả lời sát chuyên ngành hơn hẳn.",
         ]}
         aiUsage={[
-          "ChatGPT và Gemini là đối tượng thử nghiệm chính.",
-          "Prompt do cá nhân thiết kế, chỉnh sửa qua nhiều vòng.",
-          "Kết luận và đánh giá đầu ra hoàn toàn do cá nhân viết.",
+          "ChatGPT và Gemini là 2 mô hình mình thử để so sánh output.",
+          "Prompt do mình tự viết, chỉnh qua 3–4 vòng cho ra kết quả cuối cùng.",
+          "Phần nhận xét và kết luận trong bài mình tự viết bằng cách của mình.",
         ]}
         commitments={[
-          "Không dùng đầu ra AI làm bài mẫu để nộp trực tiếp.",
-          "Ghi lại prompt gốc để có thể tái hiện kết quả.",
-          "Trích dẫn nguồn khi trích lại thông tin AI cung cấp.",
+          "Không copy nguyên đoạn AI trả lời để nộp bài.",
+          "Lưu lại prompt gốc để giảng viên yêu cầu thì mình chạy lại được.",
         ]}
       />
     </ProjectShell>
@@ -1475,28 +1469,26 @@ function Project4() {
       </div>
       <EvalAndIntegrity
         good={[
-          "Phân công công việc rõ ràng theo năng lực từng thành viên.",
-          "Sử dụng Trello/Notion giúp tiến độ minh bạch, dễ theo dõi.",
-          "Họp nhóm định kỳ có biên bản, tránh trùng lặp công việc.",
+          "Nhóm 4 bạn chia việc theo thế mạnh: bạn viết tốt lo Docs, bạn thiết kế lo slide, mình lo Trello và tổng hợp.",
+          "Trello để bảng công khai nên ai chậm deadline cả nhóm đều thấy, không cần đi nhắc.",
+          "Sau mỗi buổi Meet mình ghi biên bản ngay vào Docs, hôm sau ai quên vào đọc lại.",
         ]}
         improve={[
-          "Một số buổi họp còn kéo dài do chưa có agenda cụ thể.",
-          "Cần thống nhất quy ước đặt tên file khi cộng tác.",
+          "Buổi họp đầu tiên nhóm mình họp gần 2 tiếng vì không có agenda, từ buổi 2 rút xuống 45 phút.",
+          "Đôi khi mình quên bật thông báo Trello nên bỏ lỡ comment của bạn.",
         ]}
         lesson={[
-          "Giao tiếp chủ động quan trọng hơn công cụ đang dùng.",
-          "Deadline nội bộ nên đặt sớm hơn deadline chính thức.",
-          "Ghi nhận đóng góp cá nhân giúp nhóm gắn kết hơn.",
+          "Chat Zalo nhanh nhưng thông tin trôi mất, phải chốt lại trên Docs/Trello mới yên tâm.",
+          "Nhóm mình đặt deadline nội bộ trước 2 ngày so với hạn nộp thật, đúng hôm nộp còn thời gian sửa.",
+          "Ghi rõ ai làm gì trong biên bản giúp lúc chấm điểm nhóm không xảy ra tị nạnh.",
         ]}
         aiUsage={[
-          "Dùng ChatGPT để gợi ý mẫu biên bản họp nhóm.",
-          "Dùng AI dịch nhanh tài liệu tham khảo tiếng Anh.",
-          "Không dùng AI để thay thế trao đổi giữa các thành viên.",
+          "Có lần mình nhờ ChatGPT gợi ý mẫu biên bản họp, sau đó tự sửa theo tình huống nhóm mình.",
+          "Không nhờ AI viết thay ý kiến của các bạn trong nhóm.",
         ]}
         commitments={[
-          "Đóng góp trung thực, không nhận công của thành viên khác.",
-          "Ghi nhận rõ phần việc AI hỗ trợ trong tài liệu nhóm.",
-          "Bảo mật thông tin nội bộ của nhóm khi trao đổi.",
+          "Nộp phần việc của mình đúng thật, không tính công của bạn khác.",
+          "Nếu dùng AI hỗ trợ phần nào, mình ghi lại trong file tổng hợp của nhóm.",
         ]}
       />
     </ProjectShell>
@@ -1629,28 +1621,26 @@ function Project5() {
 
       <EvalAndIntegrity
         good={[
-          "Kết hợp hợp lý 3 công cụ AI ở 3 khâu: nội dung, hình ảnh, bố cục.",
-          "Nội dung chuyển thành 5 bước hành động ngắn gọn, đúng chuẩn infographic.",
-          "Bố cục trực quan, ưu tiên khoảng trắng và biểu tượng đơn giản.",
+          "Nội dung infographic của mình chia thành 5 bước hành động, ngắn gọn để người đọc lướt qua vẫn hiểu.",
+          "Mình kết hợp 3 công cụ: ChatGPT gợi nội dung, Microsoft Designer làm hình, Canva để ráp bố cục.",
         ]}
         improve={[
-          "Một số hình do Microsoft Designer sinh còn nhiều chi tiết, cần lọc kỹ hơn.",
-          "Gợi ý bố cục tự động của Canva AI vẫn phải căn chỉnh lại thủ công.",
+          "Có 2 hình do Microsoft Designer sinh ra bị thừa chi tiết, mình phải bỏ đi và vẽ lại icon bằng Canva.",
+          "Lần đầu chọn font mình dùng font quá nhỏ, in ra không đọc được — buộc phải làm lại.",
+          "Bố cục Canva gợi ý sẵn chưa hợp cho lắm, mình phải căn lại khoảng cách từng khối.",
         ]}
         lesson={[
-          "AI hỗ trợ ý tưởng và bản nháp, không thay thế tư duy phản biện.",
-          "Kiểm chứng thông tin qua tối thiểu 3 nguồn trước khi công bố.",
-          "Luôn tự viết kết luận bằng ngôn ngữ của mình và ghi nguồn khi cần.",
+          "AI làm nhanh nhưng vẫn phải mình duyệt lại từng dòng, có lúc AI ghi sai số liệu.",
+          "Trước khi để lên infographic mình đối chiếu ít nhất 3 nguồn (UNESCO, báo Tuổi Trẻ, VnExpress) cho chắc.",
         ]}
         aiUsage={[
-          "ChatGPT: xây khung 5 bước, sau đó cá nhân rút gọn và chuyển sang dạng hành động.",
-          "Microsoft Designer: tạo hình minh họa AI/nguồn/đối chiếu theo prompt tiếng Anh.",
-          "Canva AI: gợi ý bố cục 5 bước, cá nhân căn chỉnh cỡ chữ, biểu tượng và khoảng cách.",
+          "ChatGPT: mình gõ prompt tiếng Việt yêu cầu tóm 5 bước, sau đó rút gọn xuống mỗi bước 1 dòng.",
+          "Microsoft Designer: mình gõ prompt tiếng Anh mô tả bối cảnh (student verifying news) để tạo hình.",
+          "Canva AI: chỉ dùng phần Magic Design gợi bố cục, sau đó tự căn chỉnh lại.",
         ]}
         commitments={[
-          "Khai báo rõ các công cụ AI đã dùng trong mô tả sản phẩm.",
-          "Đối chiếu dữ kiện AI với nguồn học thuật/chính thức trước khi sử dụng.",
-          "Tôn trọng bản quyền hình ảnh, biểu tượng và tài nguyên mở đã dùng.",
+          "Ghi rõ ở góc infographic là có dùng AI hỗ trợ tạo hình.",
+          "Dùng biểu tượng miễn phí của Canva (free), không lấy hình có bản quyền trên mạng.",
         ]}
       />
     </ProjectShell>
