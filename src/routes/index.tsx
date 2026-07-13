@@ -834,14 +834,28 @@ function EvalAndIntegrity({
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
-function Bai1Gallery() {
+function ExpandableGallery({
+  images,
+  label,
+  previewCount = 5,
+  cols = 6,
+}: {
+  images: { url: string }[];
+  label: string;
+  previewCount?: number;
+  cols?: 4 | 6;
+}) {
   const [expanded, setExpanded] = useState(false);
-  const previewCount = 5;
-  const preview = bai1Images.slice(0, previewCount);
-  const rest = bai1Images.slice(previewCount);
-  const shown = expanded ? bai1Images : preview;
+  const rest = images.slice(previewCount);
+  const shown = expanded ? images : images.slice(0, previewCount);
+  const gridCls = cols === 4
+    ? "grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+    : "grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6";
+  const collapseSpan = cols === 4
+    ? "col-span-2 sm:col-span-3 lg:col-span-4"
+    : "col-span-2 sm:col-span-3 lg:col-span-6";
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+    <div className={gridCls}>
       {shown.map((img, i) => (
         <a
           key={i}
@@ -852,7 +866,7 @@ function Bai1Gallery() {
         >
           <img
             src={img.url}
-            alt={`Minh chứng bài 1 – ảnh ${i + 1}`}
+            alt={`${label} – ảnh ${i + 1}`}
             loading="lazy"
             className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
           />
@@ -873,11 +887,11 @@ function Bai1Gallery() {
           </div>
         </button>
       )}
-      {expanded && (
+      {expanded && rest.length > 0 && (
         <button
           type="button"
           onClick={() => setExpanded(false)}
-          className="col-span-2 mt-1 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md sm:col-span-3 lg:col-span-6"
+          className={`${collapseSpan} mt-1 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md`}
         >
           ▲ Thu gọn
         </button>
@@ -885,6 +899,11 @@ function Bai1Gallery() {
     </div>
   );
 }
+
+function Bai1Gallery() {
+  return <ExpandableGallery images={bai1Images} label="Minh chứng bài 1" previewCount={5} cols={6} />;
+}
+
 
 function Project1() {
   return (
@@ -1283,27 +1302,7 @@ function Project3() {
             ⬇️ Tải file báo cáo (.docx)
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {bai3Images.map((img, i) => (
-            <a
-              key={i}
-              href={img.url}
-              target="_blank"
-              rel="noreferrer"
-              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
-            >
-              <img
-                src={img.url}
-                alt={`Minh chứng bài 3 – ảnh ${i + 1}`}
-                loading="lazy"
-                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
-              />
-              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
-                #{String(i + 1).padStart(2, "0")}
-              </span>
-            </a>
-          ))}
-        </div>
+        <ExpandableGallery images={bai3Images} label="Minh chứng bài 3" previewCount={5} cols={4} />
       </div>
 
       <div className="mt-6">
