@@ -667,7 +667,7 @@ function ProjectShell({
           <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/80 text-3xl shadow-soft backdrop-blur">{icon}</div>
           <div className="min-w-0">
             <div className="text-xs font-bold text-primary">DỰ ÁN {num}</div>
-            <h3 className="truncate text-xl font-black sm:text-2xl">{title}</h3>
+            <h3 className="truncate text-xl font-black sm:text-2xl whitespace-pre-wrap">{title}</h3>
           </div>
         </div>
         <div className="hidden shrink-0 flex-wrap gap-2 sm:flex">
@@ -919,7 +919,7 @@ function Bai1Gallery() {
 
 function Project1() {
   return (
-    <ProjectShell id="task-1" num="01" icon="📁" title="Bài tập 1 – Thao tác cơ bản với tệp tin và thư mục" tags={["File Explorer", "Google Drive", "OneDrive"]}>
+    <ProjectShell id="task-1" num="01" icon="📁" title={"Bài tập 1 – Thao tác cơ bản với tệp tin và thư\u00a0\nmục"} tags={["File Explorer", "Google Drive", "OneDrive"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Biết tạo thư mục, lưu trữ tài liệu khoa học, đặt tên tệp nhất quán và quản lý dữ liệu học tập hiệu quả trong suốt học kỳ.
@@ -1044,7 +1044,7 @@ function Project2() {
     { src: "Blog cá nhân", author: "Không rõ", year: "2021", trust: "Thấp", why: "Có góc nhìn thực tiễn.", limit: "Không có kiểm chứng, dễ chủ quan." },
   ];
   return (
-    <ProjectShell id="task-2" num="02" icon="🔎" title="Bài tập 2 – Tìm kiếm và đánh giá thông tin học thuật" tags={["Google Scholar", "Toán tử nâng cao", "Đánh giá nguồn"]}>
+    <ProjectShell id="task-2" num="02" icon="🔎" title={"Bài tập 2 – Tìm kiếm và đánh giá thông\u00a0\ntin học thuật"} tags={["Google Scholar", "Toán tử nâng cao", "Đánh giá nguồn"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Biết sử dụng toán tử tìm kiếm nâng cao và đánh giá độ tin cậy của nguồn thông tin học thuật.
@@ -1231,7 +1231,7 @@ function Project2() {
 // ============================================================
 function Project3() {
   return (
-    <ProjectShell id="task-3" num="03" icon="💬" title="Bài tập 3 – Viết Prompt hiệu quả cho các tác vụ học tập" tags={["ChatGPT", "Gemini", "Prompt Engineering"]}>
+    <ProjectShell id="task-3" num="03" icon="💬" title={"Bài tập 3 – Viết Prompt hiệu quả cho các\n\u00a0tác vụ học tập"} tags={["ChatGPT", "Gemini", "Prompt Engineering"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Biết cách viết prompt rõ ràng để AI trả lời đúng và hữu ích hơn cho học tập.
@@ -1406,7 +1406,7 @@ function Project4() {
     { name: "Thành viên D", task: "Tổng hợp báo cáo, kiểm tra chính tả", due: "30/11", status: "Chưa làm", note: "Sau khi có slide" },
   ];
   return (
-    <ProjectShell id="task-4" num="04" icon="🤝" title="Bài tập 4 – Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm" tags={["Trello", "Notion", "Google Sheets"]}>
+    <ProjectShell id="task-4" num="04" icon="🤝" title={"Bài tập 4 – Sử dụng công cụ hợp tác trực tuyến\n\u00a0cho dự án nhóm"} tags={["Trello", "Notion", "Google Sheets"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Biết lập kế hoạch, phân công công việc và theo dõi tiến độ bằng công cụ trực tuyến.
@@ -1609,7 +1609,7 @@ function Project5() {
     },
   ];
   return (
-    <ProjectShell id="task-5" num="05" icon="🎨" title="Bài tập 5 – Ứng dụng AI tạo sinh để thiết kế Infographic hướng dẫn kiểm chứng thông tin" tags={["ChatGPT", "Microsoft Designer", "Canva AI", "Infographic"]}>
+    <ProjectShell id="task-5" num="05" icon="🎨" title={"Bài tập 5 – Ứng dụng AI tạo sinh để thiết kế\n\u00a0Infographic , kiểm chứng thông tin"} tags={["ChatGPT", "Microsoft Designer", "Canva AI", "Infographic"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Kết hợp ba công cụ AI tạo sinh (ChatGPT, Microsoft Designer, Canva AI) để xây dựng infographic hướng dẫn sinh viên <b>kiểm chứng thông tin do AI hỗ trợ</b>, đồng thời đánh giá vai trò của tư duy con người trong sáng tạo nội dung số.
@@ -1752,7 +1752,7 @@ function Project6() {
     { t: "Phụ thuộc AI", d: "Dùng AI cho mọi việc → giảm khả năng tự tư duy.", fix: "Tự làm phần cốt lõi, dùng AI cho bước hỗ trợ." },
   ];
   return (
-    <ProjectShell id="task-6" num="06" icon="🛡️" title="Bài tập 6 – Sử dụng AI có trách nhiệm trong học tập và nghiên cứu" tags={["Đạo đức AI", "Liêm chính", "Phản biện"]}>
+    <ProjectShell id="task-6" num="06" icon="🛡️" title={"Bài tập 6 – Sử dụng AI có trách nhiệm trong\u00a0\u00a0\nhọc tập và nghiên cứu"} tags={["Đạo đức AI", "Liêm chính", "Phản biện"]}>
       <div className="grid gap-6 md:grid-cols-2">
         <Block label="🎯 Mục tiêu">
           Hiểu các vấn đề đạo đức khi sử dụng AI và xây dựng bộ nguyên tắc cá nhân.
