@@ -1379,7 +1379,7 @@ function Project4() {
         </p>
       </div>
 
-      </div>
+
 
 
       <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
