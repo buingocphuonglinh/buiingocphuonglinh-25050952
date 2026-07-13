@@ -1367,27 +1367,27 @@ function Project4() {
         </div>
 
         <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4">
-          <div className="mb-2 text-sm font-bold">🔬 Phân tích 4 góc nhìn hệ thống</div>
-          <ul className="grid gap-1 text-xs sm:grid-cols-2">
-            <li>• <b>Năng suất</b>: từ quy trình tuần tự → real-time collaboration; giảm <i>information latency</i> và <i>coordination cost</i>.</li>
-            <li>• <b>Cộng tác</b>: hình thành <i>collaborative intelligence</i> qua co-creation, minh bạch đóng góp.</li>
-            <li>• <b>Quản trị tri thức</b>: Drive như <i>knowledge repository</i>, tái sử dụng và bảo toàn dữ liệu.</li>
-            <li>• <b>Giao tiếp</b>: mô hình <i>hybrid</i> — kết hợp đồng bộ (Meet) &amp; phi đồng bộ (Docs/Drive).</li>
+          <div className="mb-2 text-sm font-bold">🔬 Mình rút ra được gì sau khi làm nhóm</div>
+          <ul className="space-y-1 text-xs">
+            <li>• Trước đây nhóm mình hay gửi file qua Zalo rồi mỗi bạn sửa một bản, cuối cùng không biết bản nào mới nhất. Dùng Google Docs thì cả 4 bạn chỉnh cùng lúc, mình không mất công gộp bài nữa.</li>
+            <li>• Trello giúp mình biết ai đang làm gì, còn bao lâu đến hạn — đỡ phải nhắn hỏi từng bạn.</li>
+            <li>• Drive lưu lại toàn bộ bản nháp nên tuần sau cần dùng lại vẫn tìm được, không sợ mất file.</li>
+            <li>• Google Meet để họp thống nhất, còn Docs/Trello để mọi người tự làm khi rảnh — cách này hợp với lịch học lệch nhau của cả nhóm.</li>
           </ul>
         </div>
 
         <div className="mt-4 rounded-xl border border-border bg-card/60 p-4">
-          <div className="mb-2 text-sm font-bold">⚠️ 4 thách thức → giải pháp</div>
+          <div className="mb-2 text-sm font-bold">⚠️ Vấn đề nhóm mình gặp và cách xử lý</div>
           <ul className="space-y-1 text-xs text-muted-foreground">
-            <li>• <b>Xung đột nội dung khi cộng tác real-time</b> → phân chia phạm vi, dùng Suggestion mode, chốt qua Meet.</li>
-            <li>• <b>Thiếu cấu trúc quản lý tài liệu</b> → thư mục nhiều cấp, quy tắc đặt tên thống nhất, phân quyền rõ.</li>
-            <li>• <b>Giao tiếp không đồng đều</b> → tăng tần suất họp, chia sẻ màn hình, tóm tắt sau họp vào Docs.</li>
-            <li>• <b>Phụ thuộc công nghệ</b> → chuẩn bị offline, lưu Drive, ghi chú lại khi mất kết nối.</li>
+            <li>• <b>Hai bạn cùng sửa một đoạn nên bị đè lên nhau</b> → nhóm chia rõ mỗi bạn phụ trách một phần, khi muốn sửa phần bạn khác thì để Suggestion cho bạn duyệt.</li>
+            <li>• <b>File đặt tên lung tung, tìm mãi không thấy</b> → nhóm thống nhất đặt kiểu <code className="rounded bg-muted px-1">NoiDung_Nhom_Ngay_v1</code>, mình tạo sẵn cây thư mục trên Drive.</li>
+            <li>• <b>Có bạn ít lên nhóm chat, hay bị sót thông tin</b> → sau mỗi buổi họp mình ghi tóm tắt vào Docs, ai vắng vào đọc lại là nắm được.</li>
+            <li>• <b>Hôm mất Wi-Fi không chỉnh được Docs</b> → mình bật chế độ offline của Drive từ trước, làm xong Docs tự đồng bộ lại.</li>
           </ul>
         </div>
 
         <p className="mt-4 rounded-xl bg-primary/10 p-3 text-xs">
-          <b>Bài học:</b> Hiệu quả không nằm ở công cụ mà ở <b>cách tổ chức</b> và <b>ý thức phối hợp</b>. Kết hợp đồng bộ + phi đồng bộ là chìa khoá tối ưu năng suất nhóm.
+          <b>Bài học của mình:</b> Công cụ nào cũng chỉ là phụ, quan trọng là cả nhóm chịu nói chuyện và thống nhất cách làm việc từ đầu.
         </p>
       </div>
 
