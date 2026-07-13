@@ -1319,12 +1319,6 @@ function Project3() {
 // PROJECT 4 — Hợp tác trực tuyến
 // ============================================================
 function Project4() {
-  const members = [
-    { name: "Thành viên A", task: "Thu thập tài liệu, tổng hợp lý thuyết", due: "20/11", status: "Hoàn thành", note: "Đã chia sẻ Drive" },
-    { name: "Thành viên B", task: "Thiết kế slide, infographic", due: "25/11", status: "Đang làm", note: "Bản v2" },
-    { name: "Thành viên C", task: "Viết kịch bản video, chỉnh sửa", due: "28/11", status: "Đang làm", note: "Chờ duyệt" },
-    { name: "Thành viên D", task: "Tổng hợp báo cáo, kiểm tra chính tả", due: "30/11", status: "Chưa làm", note: "Sau khi có slide" },
-  ];
   return (
     <ProjectShell id="task-4" num="04" icon="🤝" title={"Bài tập 4 – Sử dụng công cụ hợp tác trực tuyến\n\u00a0cho dự án nhóm"} tags={["Trello", "Notion", "Google Sheets"]}>
       <div className="grid gap-6 md:grid-cols-2">
