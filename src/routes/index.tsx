@@ -1114,6 +1114,33 @@ function Project2() {
           </ul>
         </Block>
       </div>
+
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+          🖼️ Minh chứng thực tế ({bai2Images.length} ảnh)
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {bai2Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 2 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[3/4] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
       <EvalAndIntegrity
         good={[
           "Áp dụng thành thạo toán tử site:, filetype:, \"...\", AND/OR.",
