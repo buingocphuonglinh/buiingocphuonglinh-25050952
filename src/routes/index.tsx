@@ -834,6 +834,58 @@ function EvalAndIntegrity({
 // ============================================================
 // PROJECT 1 — Quản lý tệp
 // ============================================================
+function Bai1Gallery() {
+  const [expanded, setExpanded] = useState(false);
+  const previewCount = 5;
+  const preview = bai1Images.slice(0, previewCount);
+  const rest = bai1Images.slice(previewCount);
+  const shown = expanded ? bai1Images : preview;
+  return (
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      {shown.map((img, i) => (
+        <a
+          key={i}
+          href={img.url}
+          target="_blank"
+          rel="noreferrer"
+          className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+        >
+          <img
+            src={img.url}
+            alt={`Minh chứng bài 1 – ảnh ${i + 1}`}
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+          />
+          <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+            #{String(i + 1).padStart(2, "0")}
+          </span>
+        </a>
+      ))}
+      {!expanded && rest.length > 0 && (
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          className="group relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl border border-primary/40 bg-primary/10 text-primary transition hover:bg-primary/20"
+        >
+          <div className="text-center">
+            <div className="text-2xl font-black">+{rest.length}</div>
+            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider">Xem thêm</div>
+          </div>
+        </button>
+      )}
+      {expanded && (
+        <button
+          type="button"
+          onClick={() => setExpanded(false)}
+          className="col-span-2 mt-1 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20 sm:col-span-3 lg:col-span-6"
+        >
+          ▲ Thu gọn
+        </button>
+      )}
+    </div>
+  );
+}
+
 function Project1() {
   return (
     <ProjectShell id="task-1" num="01" icon="📁" title="Bài tập 1 – Thao tác cơ bản với tệp tin và thư mục" tags={["File Explorer", "Google Drive", "OneDrive"]}>
@@ -901,27 +953,7 @@ function Project1() {
             ⬇️ Tải file báo cáo (.docx)
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {bai1Images.map((img, i) => (
-            <a
-              key={i}
-              href={img.url}
-              target="_blank"
-              rel="noreferrer"
-              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
-            >
-              <img
-                src={img.url}
-                alt={`Minh chứng bài 1 – ảnh ${i + 1}`}
-                loading="lazy"
-                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
-              />
-              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
-                #{String(i + 1).padStart(2, "0")}
-              </span>
-            </a>
-          ))}
-        </div>
+        <Bai1Gallery />
       </div>
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
