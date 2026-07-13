@@ -52,6 +52,7 @@ import bai5Img6 from "@/assets/bai5/img6.png.asset.json";
 import bai5Report from "@/assets/bai5/report.docx.asset.json";
 
 const bai4Images = [bai4Img1, bai4Img2, bai4Img3, bai4Img4, bai4Img5, bai4Img6, bai4Img7];
+const bai2Images = [bai2Img1, bai2Img2, bai2Img3];
 const bai5Images = [bai5Img1, bai5Img2, bai5Img3, bai5Img4, bai5Img5, bai5Img6];
 
 const bai3Images = [bai3Img1, bai3Img2, bai3Img3, bai3Img4, bai3Img5, bai3Img6, bai3Img7, bai3Img8, bai3Img9];
