@@ -1813,28 +1813,25 @@ function Project6() {
       </div>
       <EvalAndIntegrity
         good={[
-          "Xác định rõ 7 nguyên tắc dùng AI cá nhân, dễ áp dụng.",
-          "Phân biệt được phần tự làm và phần AI hỗ trợ trong bài.",
-          "Luôn kiểm chứng thông tin AI trả về trước khi trích dẫn.",
+          "Mình viết được 7 nguyên tắc dùng AI cho bản thân, mỗi nguyên tắc kèm ví dụ tình huống thật khi học.",
+          "Trong bài mình đánh dấu rõ đoạn nào do mình viết, đoạn nào AI có hỗ trợ.",
         ]}
         improve={[
-          "Cần khai báo chi tiết hơn về prompt và mô hình đã dùng.",
-          "Bổ sung ví dụ tình huống vi phạm để tự cảnh báo.",
+          "Chưa ghi chi tiết prompt và mô hình đã dùng cho từng đoạn, học kỳ sau mình sẽ lập bảng theo dõi.",
+          "Nên bổ sung 1–2 ví dụ vi phạm (ví dụ bạn cùng lớp copy nguyên bài ChatGPT bị trừ điểm) để tự nhắc mình.",
         ]}
         lesson={[
-          "AI là công cụ hỗ trợ, không thay thế tư duy cá nhân.",
-          "Trung thực học thuật quan trọng hơn kết quả nhanh.",
-          "Ghi rõ nguồn AI giúp bài viết đáng tin cậy hơn.",
+          "AI trả lời nhanh nhưng không phải lúc nào cũng đúng — có lần nó bịa tên tác giả mà mình suýt trích dẫn.",
+          "Thà chậm một chút mà mình hiểu bài, còn hơn nộp bài đẹp mà không hiểu gì.",
         ]}
         aiUsage={[
-          "Dùng ChatGPT để gợi ý cấu trúc bộ nguyên tắc.",
-          "Dùng Gemini để đối chiếu ví dụ đạo đức AI.",
-          "Toàn bộ nội dung cuối cùng do cá nhân biên tập lại.",
+          "ChatGPT: mình nhờ gợi ý cấu trúc 7 nguyên tắc, sau đó viết lại toàn bộ bằng lời của mình.",
+          "Gemini: đối chiếu thêm ví dụ về đạo đức AI trong giáo dục.",
         ]}
         commitments={[
-          "Không sao chép nguyên văn đầu ra AI vào bài nộp.",
-          "Ghi chú rõ đoạn nào có AI hỗ trợ, đoạn nào tự viết.",
-          "Sẵn sàng chịu trách nhiệm với mọi nội dung đã công bố.",
+          "Không copy nguyên văn câu trả lời của AI vào bài.",
+          "Nếu giảng viên hỏi phần nào có AI hỗ trợ, mình sẵn sàng chỉ rõ.",
+          "Chịu trách nhiệm với toàn bộ nội dung trong portfolio này.",
         ]}
       />
     </ProjectShell>
