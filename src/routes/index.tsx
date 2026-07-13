@@ -877,7 +877,7 @@ function Bai1Gallery() {
         <button
           type="button"
           onClick={() => setExpanded(false)}
-          className="col-span-2 mt-1 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20 sm:col-span-3 lg:col-span-6"
+          className="col-span-2 mt-1 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md sm:col-span-3 lg:col-span-6"
         >
           ▲ Thu gọn
         </button>
@@ -948,7 +948,7 @@ function Project1() {
           <a
             href={bai1Report.url}
             download
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
           >
             ⬇️ Tải file báo cáo (.docx)
           </a>
@@ -1286,7 +1286,7 @@ function Project3() {
           <a
             href={bai3Report.url}
             download
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
           >
             ⬇️ Tải file báo cáo (.docx)
           </a>
@@ -1499,7 +1499,7 @@ function Project4() {
           <a
             href={bai4Report.url}
             download
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
           >
             ⬇️ Tải file báo cáo (.docx)
           </a>
@@ -1653,7 +1653,7 @@ function Project5() {
           <a
             href={bai5Report.url}
             download
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition hover:bg-primary/20"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
           >
             ⬇️ Tải file báo cáo (.docx)
           </a>
