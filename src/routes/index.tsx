@@ -1842,16 +1842,43 @@ function Project6() {
         </div>
       </div>
 
-      <EvidenceGallery
-        items={[
-          { title: "Infographic 7 nguyên tắc dùng AI có trách nhiệm" },
-          { title: "Ví dụ prompt vi phạm & prompt cải thiện" },
-          { title: "Ảnh chụp phần khai báo dùng AI trong bài" },
-          { title: "Bảng phân biệt phần tự làm và phần AI hỗ trợ" },
-          { title: "Cam kết trung thực học thuật cá nhân" },
-          { title: "Ghi chú kiểm chứng thông tin AI trả về" },
-        ]}
-      />
+      <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-primary">
+            🖼️ Minh chứng thực tế ({bai6Images.length} ảnh)
+          </div>
+          <a
+            href={bai6Report.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/15 px-6 py-3 text-sm font-black text-primary shadow-sm transition hover:bg-primary/25 hover:shadow-md"
+          >
+            ⬇️ Tải file báo cáo (.pdf)
+          </a>
+        </div>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {bai6Images.map((img, i) => (
+            <a
+              key={i}
+              href={img.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-muted"
+            >
+              <img
+                src={img.url}
+                alt={`Minh chứng bài 6 – ảnh ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              />
+              <span className="absolute left-2 top-2 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-black text-primary backdrop-blur">
+                #{String(i + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <Block label="🔬 Phân tích – Tư duy phản biện">
