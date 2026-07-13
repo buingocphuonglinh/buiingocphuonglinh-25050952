@@ -1319,12 +1319,6 @@ function Project3() {
 // PROJECT 4 — Hợp tác trực tuyến
 // ============================================================
 function Project4() {
-  const members = [
-    { name: "Thành viên A", task: "Thu thập tài liệu, tổng hợp lý thuyết", due: "20/11", status: "Hoàn thành", note: "Đã chia sẻ Drive" },
-    { name: "Thành viên B", task: "Thiết kế slide, infographic", due: "25/11", status: "Đang làm", note: "Bản v2" },
-    { name: "Thành viên C", task: "Viết kịch bản video, chỉnh sửa", due: "28/11", status: "Đang làm", note: "Chờ duyệt" },
-    { name: "Thành viên D", task: "Tổng hợp báo cáo, kiểm tra chính tả", due: "30/11", status: "Chưa làm", note: "Sau khi có slide" },
-  ];
   return (
     <ProjectShell id="task-4" num="04" icon="🤝" title={"Bài tập 4 – Sử dụng công cụ hợp tác trực tuyến\n\u00a0cho dự án nhóm"} tags={["Trello", "Notion", "Google Sheets"]}>
       <div className="grid gap-6 md:grid-cols-2">
@@ -1385,34 +1379,8 @@ function Project4() {
         </p>
       </div>
 
-      <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
-        <table className="w-full text-left text-sm">
-          <thead className="bg-accent">
-            <tr>
-              {["Thành viên", "Nhiệm vụ", "Hạn", "Trạng thái", "Ghi chú"].map((h) => (
-                <th key={h} className="p-3 font-bold">{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {members.map((m) => (
-              <tr key={m.name} className="border-t border-border">
-                <td className="p-3 font-semibold">{m.name}</td>
-                <td className="p-3 text-muted-foreground">{m.task}</td>
-                <td className="p-3 text-muted-foreground">{m.due}</td>
-                <td className="p-3">
-                  <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${
-                    m.status === "Hoàn thành" ? "bg-secondary/30 text-secondary-foreground"
-                      : m.status === "Đang làm" ? "bg-primary/20 text-primary"
-                      : "bg-muted text-muted-foreground"
-                  }`}>{m.status}</span>
-                </td>
-                <td className="p-3 text-muted-foreground">{m.note}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+
+
 
       <div className="mt-6 rounded-3xl border border-border bg-card/60 p-6">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
